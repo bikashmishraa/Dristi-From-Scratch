@@ -42,6 +42,7 @@ body,html{
     padding: 0px;
     margin: 0px;
     animation-name: fadeIn;
+    font-size: 1.1em;
     animation-duration: 1s;
     animation-iteration-count: 1;
     background-image: linear-gradient(to bottom right, #894B9C, #6C39DC);
@@ -126,6 +127,7 @@ div.aboutPage{
     min-height: 100vh;
     z-index: 1;
     padding-bottom: 4em;
+    padding-top: 2em;
     border-radius: 2vw 2vw 0 0;
     background-color: rgba(0,0,0,0.8);
     font-size: 1em;
