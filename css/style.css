@@ -118,15 +118,15 @@ div.hero{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin-bottom: 10vh;
+    height: 100svh;
+    margin-bottom: 10svh;
     font-size: 1em;
     text-align: center;
 }
 
 div.aboutPage{
     color: rgba(255,255,255,0.8);
-    min-height: 100vh;
+    min-height: 100svh;
     z-index: 1;
     padding-bottom: 4em;
     padding-top: 2em;
@@ -136,7 +136,7 @@ div.aboutPage{
     padding-left: 1em;
     padding-right: 1em;
     animation: curveIn linear;
-    animation-timeline: view(90vh 0vh);
+    animation-timeline: view(90svh 0vh);
 }
 div.aboutPage img{
     border-radius: 18px;
@@ -153,16 +153,16 @@ div.aboutPage img{
 }
 .animatedOut{
     animation: glideOut ease-in;
-    animation-timeline: view(0vh 90vh);
+    animation-timeline: view(0svh 90vh);
 }
 
 .animatedIn{
     animation: glideIn ease-out;
-    animation-timeline: view(90vh 0px);
+    animation-timeline: view(90svh 0px);
 }
 
 #mapContainer{
-    height: 0vh;
+    height: 0svh;
     transition: 0.5s ease;
     overflow: hidden;
     border-radius: 18px;
@@ -172,7 +172,7 @@ div.aboutPage img{
     display:none;
 }
 #map{
-    height: 80vh;
+    height: 80svh;
 }
 div.gm-style{
     color: black;
@@ -425,7 +425,7 @@ div#contact-us  span:hover{
 }
 
 #view-on-map{
-    margin: 2vh;
+    margin: 2svh;
     transition: 0.5s ease;
 }
 #view-on-map:hover{
