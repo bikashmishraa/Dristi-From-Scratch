@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrainsMono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 
 *{
     box-sizing: border-box;
@@ -46,6 +47,7 @@ body,html{
     animation-duration: 1s;
     animation-iteration-count: 1;
     background-image: linear-gradient(to bottom right, #894B9C, #6C39DC);
+    background-attachment: fixed;
     font-family: "Rubik", Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
@@ -84,9 +86,9 @@ nav > ul{
 }
 nav > ul > li{
     border-radius: 18px;
-    background-color: rgba(0,0,0,0);
+    background-color:#180D26;
     padding: 1em;
-    backdrop-filter: blur(6px);
+
     flex-direction: column;
     padding-right: 1em;
     font-size: 1em;
@@ -96,7 +98,7 @@ nav > ul > li{
     transition: 0.5s ease;
 }
 nav>ul>li:hover{
-    background-color: rgba(19, 10, 31, 0.9);
+    background-color: #140A1E;
 }
 
 div.mainContent{
@@ -104,11 +106,11 @@ div.mainContent{
 }
 
 div.hero{
-    background-color: rgba(0,0,0,0.8);
+    background-color:#180D26;
     width: 95%;
     margin: auto;
     backdrop-filter: blur(13px);
-    box-shadow: rgba(0,0,0,0.9) 0px 0px 95px;
+    /* box-shadow: rgba(0,0,0,0.9) 0px 0px 95px; */
     border-radius: 0vw 0vw 20em 20em;
 
     display:flex;
@@ -129,10 +131,12 @@ div.aboutPage{
     padding-bottom: 4em;
     padding-top: 2em;
     border-radius: 2vw 2vw 0 0;
-    background-color: rgba(0,0,0,0.8);
+    background-color:#180D26;
     font-size: 1em;
     padding-left: 1em;
     padding-right: 1em;
+    animation: curveIn linear;
+    animation-timeline: view(90vh 0vh);
 }
 div.aboutPage img{
     border-radius: 18px;
@@ -141,12 +145,22 @@ div.aboutPage img{
     display: inline-block;
 }
 .info_card{
-    background:rgba(0,0,0,0.2);
+    background:#140A1E;
     color:rgba(255,255,255,0.8);
     padding: 2em;
     border-radius: 18px;
     margin: 1em;
 }
+.animatedOut{
+    animation: glideOut ease-in;
+    animation-timeline: view(0vh 90vh);
+}
+
+.animatedIn{
+    animation: glideIn ease-out;
+    animation-timeline: view(90vh 0px);
+}
+
 #mapContainer{
     height: 0vh;
     transition: 0.5s ease;
@@ -204,7 +218,6 @@ h1.title2{
     font-family: "Russo One", sans-serif;
     position: relative;
     font-size: 1em;
-    display: inline-block ;
     margin-top: 1em;
 }
 h2{
@@ -352,13 +365,13 @@ div#contact-us{
     font-size: 0.5em;
     font-family: "JetBrains Mono";
     font-weight: 900;
-    text-align: left;
+    text-align: center;
 }
 div#contact-us  span{
-    
     display: flex;
     align-items: center;
     margin: 12px;
+    width: fit-content;
 
     position: relative;
     padding: 1em;
@@ -425,7 +438,7 @@ div#contact-us  span:hover{
     flex: 1;
     display:flex;
     flex-direction: column;
-    background:rgba(0,0,0,0.2);
+    background:#140A1E;
     margin: 0.1em;
     align-items: center;
     justify-content: center;
@@ -463,6 +476,7 @@ form.contact-form input{
 
 form.contact-form textarea{
     border: none;
+    resize: none;
     color: white;
     border-radius: 18px;
     padding: 1em;
@@ -508,45 +522,6 @@ form.contact-form button:hover{
 
 .h-captcha:hover .captcha_overlay{
     opacity:0;
-
-}
-
-
-@keyframes fadeIn{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-@keyframes move-bg {
-    to {
-        background-position: 200% center;
-    }
-}
-
-
-@keyframes drop {
-    0% {
-        transform: translateY(-200px) scaleY(0.9);
-        opacity: 0;
-    }
-    5% {
-        opacity: 0.7;
-    }
-    50% {
-        transform: translateY(0px) scaleY(1);
-        opacity: 1;
-    }
-    65% {
-        transform: translateY(-17px) scaleY(0.9);
-        opacity: 1;
-    }
-    75% {
-        transform: translateY(-22px) scaleY(0.9);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0px) scaleY(1);
-        opacity: 1;
-    }
 }
 @media (min-width: 500px) and (max-width: 1000px){
     .info_card{
@@ -631,15 +606,36 @@ form.contact-form button:hover{
 
 @media (min-width: 1000px) {
     nav > span > img{
-        height: 4em;
-    }
-
-    .info_card{
-        display: inline-block;
+        height: 3em;
     }
     .info_card img{
         float:right;
         margin-left: 5em;
+    }
+    h1#eventName{
+        position: relative;
+        transform: rotate(-90deg);
+        margin: 0;
+        font-size: 1.5em;
+        white-space: nowrap;
+    }
+    h1#eventName::before{
+        content:'';
+        height: 100%;
+        width:4px;
+        background-image: linear-gradient(to bottom right, #894B9C, #6C39DC);
+        position: absolute;
+        right:-10%;
+        top:0;
+    }
+    h1#eventName::after{
+        content:'';
+        height: 100%;
+        width:1px;
+        background-image: linear-gradient(to bottom right, #894B9C, #6C39DC);
+        position: absolute;
+        right:-14%;
+        top:0;
     }
 
     .info_card div{
@@ -648,12 +644,34 @@ form.contact-form button:hover{
     }
     div#countdown{
         font-size: 6vw;
+        flex:1;
+        min-width: 20vw;
     }
-    div#hero{
-        font-size:0.7em;
+
+    div.hero{
+        padding: 20vw;
+        flex-direction: row;
+        gap: 2em;
+        text-align: left;
+    }
+
+    div.hero div.heroTitle{
+        flex:1;
+    }
+
+    span.smoll1{
+        line-height: 50%;
+        font-size: 0.7rem;
+    }
+
+    nav > ul > li{
+        font-size: 1rem;
     }
     div#contact-us{
         font-size: 0.7em;
+        white-space: nowrap;
+        flex:0.5;
+        text-align: left;
     }
     img{
         max-width: 600px;
@@ -707,5 +725,75 @@ form.contact-form button:hover{
 
     form.contact-form input{
         width: 30vw;
+    }
+    @keyframes curveIn{
+        0% {
+            border-radius: 2vw 2vw 0% 0%;
+            padding-top: 2em;
+        }
+        100% {
+            border-radius: 17vw 17vw 0 0;
+            padding-top: 14em;
+        }
+    }
+
+}
+
+
+@keyframes fadeIn{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes glideIn{
+    0% {
+        scale: 0.9;
+        opacity:0;
+    }
+    100% {
+        scale: 1;
+        opacity:1;
+    }
+}
+@keyframes glideOut{
+    0% {
+        scale: 1 ;
+        /* opacity:1; */
+    }
+    100% {
+        scale: 0.9;
+        /* opacity:0; */
+    }
+}
+
+@keyframes move-bg {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+@keyframes drop {
+    0% {
+        transform: translateY(-200px) scaleY(0.9);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(0px) scaleY(1);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(-17px) scaleY(0.9);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-22px) scaleY(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px) scaleY(1);
+        opacity: 1;
     }
 }

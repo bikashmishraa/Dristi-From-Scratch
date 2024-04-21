@@ -21,16 +21,18 @@
     </ul>
   </nav>
   <div class="mainContent">
-    <div class="hero">
+    <div class="hero animatedOut">
       <h1 id="eventName">Dristi 3.0</h1>
-      <h1 class="title2">
-        We are comming soon!
-      </h1>
-      <span class="smoll1">
-        Counting every seconds until the event.<br>
-        Remaining time:
-      </span>
-      <div id="countdown">Loading..</div>
+      <div class="heroTitle">
+        <h1 class="title2">
+          We are comming soon!
+        </h1>
+        <span class="smoll1">
+          Counting every seconds until the event.<br>
+          Remaining time:
+        </span>
+        <div id="countdown">Loading..</div>
+      </div>
       <div id="contact-us">
         <a href="#" id="img_logo">
           <span id="facebook">
@@ -46,12 +48,12 @@
     </div>
     <!-- <img alt="banner-end" id = "banner_end" src="img/banner_end.png" /> -->
     <div class="aboutPage" id="aboutTop">
-      <h1 class="title1">
+      <h1 class="title1 animatedIn">
         About Us
       </h1>
       <div>
-        <div class="info_card" href="#" id="img_logo">
-          <img alt="People of Dristi" src="img/kec_peeps.png" />
+        <div class="info_card animatedIn" href="#" id="img_logo">
+          <img class="animatedIn" alt="People of Dristi" src="img/kec_peeps.png" />
           <h2>Dristi Team</h2>
           <div>
             Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Et ligula ullamcorper malesuada proin
@@ -74,7 +76,7 @@
       </div>
       <div>
         <div class="small_cards">
-          <div class="info_card_small" href="#" id="location_detail">
+          <div class="info_card_small animatedIn" href="#" id="location_detail">
             <center>
               <img alt="Address" src="img/location.png" height="50px" />
               <h2>Our Address</h2>
@@ -88,8 +90,8 @@
               </div>
             </center>
           </div>
-        
-          <div class="info_card_small" href="#" id="contact_detail">
+
+          <div class="info_card_small animatedIn" href="#" id="contact_detail">
             <center>
               <img alt="Address" src="img/email.png" height="50px" />
               <h2>Email Us</h2>
@@ -102,25 +104,26 @@
             </center>
           </div>
         </div>
-        
+
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
           <input type="hidden" name="access_key" value="316d19b5-0c0d-42b5-aafa-84c4baea1e73">
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-          <h1 class="title1">
+          <h1 class="title1 animatedIn">
             Quick Message
           </h1>
-          <input name="name" type="text" placeholder="Your Name" class="contact-name" required />
-          <input name="email" type="email" placeholder="Your Email" class="contact-email" required />
-          <textarea cols="30" id="contact-message" placeholder="Your Messages" name="message" rows="10"></textarea>
+          <input name="name" type="text" placeholder="Your Name" class="contact-name animatedIn" required />
+          <input name="email" type="email" placeholder="Your Email" class="contact-email animatedIn" required />
+          <textarea cols="30" id="contact-message" placeholder="Your Messages" name="message" class="animatedIn"
+            rows="10"></textarea>
           <!-- hCaptcha Spam Protection -->
-          <div class="h-captcha" data-captcha="true" data-theme="dark">
+          <div class="h-captcha animatedIn" data-captcha="true" data-theme="dark">
             <div class="captcha_overlay">
-            <div class="clickables">
-              H-Captcha
-            </div>
+              <div class="clickables">
+                H-Captcha
+              </div>
             </div>
           </div>
-          <button type="submit" data-sitekey="316d19b5-0c0d-42b5-aafa-84c4baea1e73">
+          <button type="submit" data-sitekey="316d19b5-0c0d-42b5-aafa-84c4baea1e73" class="animatedIn">
             <div class="clickables">
               Submit
             </div>
