@@ -1,6 +1,6 @@
 countDownDiv = document.getElementById("countdown")
 // const deadline = new Date('May 15 24 00:00:00');
-const deadline = new Date('May 15 24 00:00:00');
+const deadline = new Date('June 15 24 00:00:00');
 const today = new Date();
 
 let tsec = (deadline.getTime() - today.getTime()) / 1000

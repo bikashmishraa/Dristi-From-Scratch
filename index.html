@@ -13,20 +13,30 @@
 <body>
   <nav>
     <span>
-      <img alt="logo" src="img/dristi_logo_small.png" />
+      <img alt="logo" src="img/logo.png" />
     </span>
     <ul id="extraNav">
-      <li><a href="#aboutTop" class="clickables">About</a></li>
-      <li><a href="modules/events.html" class="clickables">Events</a></li>
-      <li><a href="" class="clickables">Contacts</a></li>
+      <li class="glass"><a href="#aboutTop" class="clickables">About</a></li>
+      <li class="glass"><a href="modules/events.html" class="clickables">Events</a></li>
+      <li class="glass"><a href="" class="clickables">Contacts</a></li>
     </ul>
   </nav>
+  <div id="contact-us">
+    <a href="#" id="facebook">
+      <i class="fa-brands fa-facebook"></i>
+      <!-- &nbsp;Join Us -->
+    </a>
+    <a href="#" id="instagram">
+      <i class="fa-brands fa-instagram"></i>
+      <!-- &nbsp;Follow Us -->
+    </a>
+  </div>
   <div class="mainContent">
-    <div class="hero animatedOut">
+    <div class="hero glass-opti animatedOut">
       <h1 id="eventName">Dristi 3.0</h1>
       <div class="heroTitle">
         <h1 class="title2">
-          We are comming soon!
+          We are coming soon!
         </h1>
         <span class="smoll1">
           Counting every seconds until the event.<br>
@@ -34,21 +44,9 @@
         </span>
         <div id="countdown">Loading..</div>
       </div>
-      <div id="contact-us">
-        <a href="#" id="img_logo">
-          <span id="facebook">
-            <i class="fa-brands fa-facebook"></i>
-            &nbsp;Join Us</span>
-        </a>
-        <a href="#" id="img_logo">
-          <span id="instagram">
-            <i class="fa-brands fa-instagram"></i>
-            &nbsp;Follow Us</span>
-        </a>
-      </div>
     </div>
     <!-- <img alt="banner-end" id = "banner_end" src="img/banner_end.png" /> -->
-    <div class="aboutPage" id="aboutTop">
+    <div class="aboutPage glass-opti" id="aboutTop">
       <h1 class="title1 animatedIn">
         About Us
       </h1>
@@ -56,7 +54,7 @@
         <div class="info_card animatedIn" id="img_logo">
           <img class="animatedIn" alt="People of Dristi" src="img/kec_peeps.png" />
           <div>
-            <h2>Dristi Team</h2>
+            <h2>IT Club Team</h2>
             <div>
               Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Et ligula ullamcorper malesuada proin
               libero nunc,
@@ -67,7 +65,8 @@
               Ipsum, faucibus vitae aliquet nec, ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis
               aliquam
               faucibus purus in massa. Nisi est, sit amet facilisis magna etiam tempor, orci!
-              Purus viverra accumsan in nisl nisi, scelerisque eu ultrices vitae, auctor eu augue ut lectus arcu, bibendum
+              Purus viverra accumsan in nisl nisi, scelerisque eu ultrices vitae, auctor eu augue ut lectus arcu,
+              bibendum
               at varius
               vel, pharetra vel turpis nunc eget. Vitae congue eu, consequat ac.
               Elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh
@@ -144,9 +143,12 @@
 <!-- Required for hCaptcha -->
 <script src="https://web3forms.com/client/script.js" async defer></script>
 
-<script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
-    ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly" });</script>
+<script>(g => {var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => {await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a)})); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))})
+    ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
 
+<script>
+  document.documentElement.requestFullscreen();
+</script>
 
 
 <script src="js/index.js"></script>

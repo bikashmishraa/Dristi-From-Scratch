@@ -2,11 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
+/* Variables */
+
+:root{
+  --color1: rgba(14,14,25,1);
+  --color2Op: #2270A5;
+  --color2: rgba(38, 127, 186, 0.3);
+  --color2TransC: rgba(38, 127, 186, 0.1);
+  --color2Trans: rgba(38, 127, 186, 0);
+  --color2Brighter: rgba(48, 147, 206, 0.5);
+  --color2BrighterTrans: rgba(48, 147, 206, 0);
+  --color3: #111A29;
+  --gradient1: linear-gradient(to right,#48a1ae 20%, #267FBA 60%, #48a1ae 95%);
+  --gradient2: linear-gradient(to right,#48a1ae, #267FBA);
+}
+
+/* Convenient configurations */
 
 *{
   box-sizing: border-box;
   cursor: default;
 }
+
 ::-webkit-scrollbar {
   display:none;
 }
@@ -36,20 +53,33 @@ ul{
   list-style: none;
 }
 
+/* Common classes */
+
+.glass-opti {
+  background-color: var(--color2TransC);
+}
+.glass {
+  background-color: var(--color2TransC);
+  backdrop-filter: blur(20px);
+}
+
+/* Home Page */
 body,html{
- max-width: 100%;
+  max-width: 100%;
   padding: 0px;
-  /* overflow-x: hidden; */
   margin: 0px;
   animation-name: fadeIn;
   font-size: 1.1em;
   animation-duration: 1s;
   animation-iteration-count: 1;
-  background-image: linear-gradient(to bottom right, #894B9C, #6C39DC);
+  background: var(--color1); 
   background-attachment: fixed;
   font-family: "Rubik", Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
+
+/* Nav Begins */
+
 nav {
   display:flex;
   position:fixed;
@@ -57,7 +87,6 @@ nav {
   top:0;
   width: 100%;
   padding-top: 0px;
-  /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
   font-weight: 400;
 }
 nav > span{
@@ -65,18 +94,13 @@ nav > span{
 }
 
 nav > span > img{
-  /* backdrop-filter: blur(26px); */
-  /* box-shadow: rgba(0,0,0,0.2) 0px 0px 15px 4px; */
-  /* border-radius: 0 0 20px 20px ; */
+  padding: 0.8rem;
   height: 5em;
 }
 
 nav > ul{
   display: flex;
   align-items: center;
-  /* backdrop-filter: blur(26px); */
-  /* box-shadow: rgba(0,0,0,0.2) 0px 0px 15px 4px; */
-  /* border-radius: 0 0 20px 20px ; */
   margin:0px;
   padding:0px;
   justify-content: center;
@@ -85,9 +109,7 @@ nav > ul{
 }
 nav > ul > li{
   border-radius: 18px;
-  background-color:#180D26;
   padding: 1em;
-
   flex-direction: column;
   padding-right: 1em;
   font-size: 1em;
@@ -97,21 +119,20 @@ nav > ul > li{
   transition: 0.5s ease;
 }
 nav>ul>li:hover{
-  background-color: #140A1E;
+  opacity: 0.5;
 }
+
+/* Nav Ends */
+/* Body Begins */
 
 div.mainContent{
   position: relative;
 }
 
 div.hero{
-  background-color:#180D26;
   width: 95%;
   margin: auto;
-  backdrop-filter: blur(13px);
-  /* box-shadow: rgba(0,0,0,0.9) 0px 0px 95px; */
   border-radius: 0vw 0vw 20em 20em;
-
   display:flex;
   color: rgba(225,225,225,1.0);
   flex-direction: column;
@@ -123,39 +144,6 @@ div.hero{
   text-align: center;
 }
 
-.headerPage{
-  background-color:#180D26;
-  width: 95%;
-  margin: auto;
-  color: rgba(225,225,225,1.0);
-
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100svh;
-  margin-top: 20rem;
-  margin-bottom: 10svh;
-  font-size: 1em;
-  text-align: center;
-  border-radius: 2vw ;
-}
-.headerPage .info_card{
-  display:flex;
-  flex-direction: column;
-}
-
-h1.headerTitle{
-  position:absolute;
-  top: -47vw;
-  left: 50vw;
-  font-size: 24vw;
-  z-index:0;
-  translate: -50% 0;
-  color: rgba(255,255,255,0.8);
-  text-align:center;
-}
-
 div.aboutPage{
   color: rgba(255,255,255,0.8);
   min-height: 100svh;
@@ -163,7 +151,6 @@ div.aboutPage{
   padding-bottom: 4em;
   padding-top: 2em;
   border-radius: 2vw 2vw 0 0;
-  background-color:#180D26;
   font-size: 1em;
   padding-left: 1em;
   padding-right: 1em;
@@ -177,7 +164,7 @@ div.aboutPage img{
   display: inline-block;
 }
 .info_card{
-  background:#140A1E;
+  background-color: rgba(0,0,0,0.2);
   color:rgba(255,255,255,0.8);
   padding: 2em;
   border-radius: 18px;
@@ -265,8 +252,7 @@ h2{
   font-weight: 900;
   /* position: relative; */
   font-family: "JetBrains Mono";
-  background-color: #894A9C;
-  background-image: linear-gradient(45deg, #4E9EC6, #894A9C);
+  background-image: var(--gradient2);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -289,15 +275,14 @@ h1.title1::after{
   left: 0px;
   width: 90%;
   height: 2px;
-  background-image: linear-gradient(45deg, #4E9EC6, #894A9C);
+  background-image: var(--gradient2);
 }
 
 span.smoll1{
   font-weight: 900;
   font-family: "JetBrains Mono";
   font-size: 0.5em;
-  background-color: #894A9C;
-  background-image: linear-gradient(45deg, #4E9EC6, #894A9C);
+  background-image: var(--gradient2);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -339,8 +324,7 @@ div#countdown > span#countDownDays::before{
   font-size: 20%;
 
   font-family: "JetBrains Mono";
-  background-color: #894A9C;
-  background-image: linear-gradient(45deg, #4E9EC6, #894A9C);
+  background-image: var(--gradient2);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -355,8 +339,7 @@ div#countdown > span#countDownHours::before{
   font-size: 20%;
 
   font-family: "JetBrains Mono";
-  background-color: #894A9C;
-  background-image: linear-gradient(45deg, #4E9EC6, #894A9C);
+  background-image: var(--gradient2);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -371,14 +354,14 @@ div#countdown > span#countDownMins::before{
   font-size: 20%;
 
   font-family: "JetBrains Mono";
-  background-color: #894A9C;
-  background-image: linear-gradient(45deg, #4E9EC6, #894A9C);
+  background-image: var(--gradient2);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-text-fill-color: transparent;
 }
+
 div#countdown > span#countDownSecs::before{
   content: 'Seconds';
   position: absolute;
@@ -387,8 +370,7 @@ div#countdown > span#countDownSecs::before{
   transform: translate(30%, 3em);
 
   font-family: "JetBrains Mono";
-  background-color: #894A9C;
-  background-image: linear-gradient(45deg, #4E9EC6, #894A9C);
+  background-image: var(--gradient2);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -400,49 +382,45 @@ div#countdown > span#countDownSecs::before{
 div#contact-us{
   font-size: 0.5em;
   font-family: "JetBrains Mono";
-  font-weight: 900;
+  font-weight: 400;
+  position: fixed;
+  right: 0.5vw;
+  bottom: 20rem;
   text-align: center;
+  backdrop-filter: blur(25px);
 }
-div#contact-us  span{
-  display: flex;
-  align-items: center;
-  margin: 12px;
-  width: fit-content;
 
-  position: relative;
-  padding: 1em;
-  box-sizing: border-box;
-
-  color: #FFF;
-  background: #190D25;
-  background-clip: padding-box; /* !importanté */
-  border: solid 3px transparent; /* !importanté */
-  transition: background 0.5s ease;
-  border-radius: 12px;
-}
-div#contact-us  span::before{
-  content: '';
+div#contact-us::before{
+  content: "";
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  z-index: -1;
-  margin: -3px; /* !importanté */
-  border-radius: 12px;
-  background-color: #894A9C;
-  background-image: linear-gradient(90deg, #4E9EC6, #894A9C, #4E9EC6);
-  background-size: 200% auto;
-  animation: move-bg 1s linear infinite;
+  width: 2px;
+  background: linear-gradient(to top, #469FAF 40%, #2A83B9 80%, transparent);
+  height: 20vh;
+  transform: translate(0, -20vh);
+
 }
-div#contact-us  span:hover{
-  border-radius: 2px;
-  background: transparent;
-  transform: translate(0,1px);
-  /* border: solid 3px #190D25; /\* !importanté *\/ */
+div#contact-us::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, #469FAF 40%, #2A83B9 80%, transparent);
+  height: 20vh;
+
 }
+
+div#contact-us a#facebook, 
+div#contact-us a#instagram {
+  color: #E1E1E1;
+  display:block;
+  font-size: 1.15rem;
+  margin: 1rem;
+}
+
 
 .clickables{
   font-family: "JetBrains Mono";
   font-weight:900 ;
-  background: linear-gradient(to right,#894A9C 20%, #4E9EC6 40%, #894A9C 60%, #4E9EC6 80%,#894A9C 90%);
+  background-image: var(--gradient1);
   background-size: 200% auto;
   background-clip: text;
   text-fill-color: transparent;
@@ -451,13 +429,6 @@ div#contact-us  span:hover{
   animation: move-bg 3s linear infinite;
   transition: 0.5s ease;
   cursor: pointer;
-}
-.clickables:hover{
-  background: white;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 #view-on-map{
@@ -474,13 +445,12 @@ div#contact-us  span:hover{
   flex: 1;
   display:flex;
   flex-direction: column;
-  background:#140A1E;
+  background:rgba(0,0,0,0.3);
   margin: 0.1em;
   align-items: center;
   justify-content: center;
   border-radius: 18px;
   padding: 1em;
-  /* border: 3px solid #894A9C; */
 }
 .info_card_small>center>img{
   border-radius: 0px;
@@ -560,7 +530,7 @@ form.contact-form button:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(19, 10, 31, 0.9);
+  background-color: var(--color2Brighter);
   transition: 0.2s ease;
   font-family: "JetBrains Mono";
 }
@@ -674,7 +644,7 @@ form.contact-form button:hover{
     content:'';
     height: 100%;
     width:4px;
-    background-image: linear-gradient(to bottom right, #894B9C, #6C39DC);
+    background-image: var(--gradient2);
     position: absolute;
     right:-10%;
     top:0;
@@ -683,7 +653,7 @@ form.contact-form button:hover{
     content:'';
     height: 100%;
     width:1px;
-    background-image: linear-gradient(to bottom right, #894B9C, #6C39DC);
+    background-image: var(--gradient2);
     position: absolute;
     right:-14%;
     top:0;
@@ -717,12 +687,6 @@ form.contact-form button:hover{
 
   nav > ul > li{
     font-size: 1rem;
-  }
-  div#contact-us{
-    font-size: 0.7em;
-    white-space: nowrap;
-    flex:0.5;
-    text-align: left;
   }
   img{
     max-width: 600px;
