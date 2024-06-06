@@ -78,6 +78,7 @@ body,html{
   scroll-behavior: smooth;
 }
 
+
 /* Nav Begins */
 
 nav {
@@ -157,6 +158,8 @@ div.aboutPage{
   animation: curveIn linear;
   animation-timeline: view(90svh 0vh);
 }
+
+
 div.aboutPage img{
   border-radius: 18px;
   margin-top: 1em;
@@ -384,28 +387,11 @@ div#contact-us{
   font-family: "JetBrains Mono";
   font-weight: 400;
   position: fixed;
+  border-radius: 12px;
+  z-index: 2;
   right: 0.5vw;
   bottom: 20rem;
   text-align: center;
-  backdrop-filter: blur(25px);
-}
-
-div#contact-us::before{
-  content: "";
-  position: absolute;
-  width: 2px;
-  background: linear-gradient(to top, #469FAF 40%, #2A83B9 80%, transparent);
-  height: 20vh;
-  transform: translate(0, -20vh);
-
-}
-div#contact-us::after{
-  content: "";
-  position: absolute;
-  width: 2px;
-  background: linear-gradient(to bottom, #469FAF 40%, #2A83B9 80%, transparent);
-  height: 20vh;
-
 }
 
 div#contact-us a#facebook, 
@@ -445,7 +431,7 @@ div#contact-us a#instagram {
   flex: 1;
   display:flex;
   flex-direction: column;
-  background:rgba(0,0,0,0.3);
+  background:rgba(0,0,0,0.2);
   margin: 0.1em;
   align-items: center;
   justify-content: center;
@@ -468,6 +454,7 @@ input{
   height: 50px;
   border-radius: 18px;
   color: white;
+  display:block;
   padding: 1em;
   margin: 5px;
   background-color: rgba(0,0,0,0.2);
@@ -483,10 +470,30 @@ form.contact-form{
 form.contact-form input{
   width: 80vw;
 }
+form.contact-form>div#form-right {
+  display:none;
+}
+
 ::placeholder{
   color: rgba(255,255,255,0.5);
   font-weight: 600;
   /* font-size: 0.7em; */
+}
+form.contact-form {
+  display: flex;
+}
+form.contact-form input{
+  width: 30vw;
+}
+form.contact-form > div.form_left {
+  flex: 1;
+}
+form.contact-form > div.form_right {
+  display: block;
+  background-image: url("../img/quick_contact.svg");
+  width: 200px;
+  height: 200px;
+  flex: 1;
 }
 
 form.contact-form textarea{
@@ -535,15 +542,25 @@ form.contact-form button:hover{
   font-family: "JetBrains Mono";
 }
 
+.info_card .kecImg {
+  background-image: url("../img/kec_peeps.png");
+  border-radius: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .h-captcha:hover .captcha_overlay{
   opacity:0;
 }
 @media (min-width: 600px) and (max-width: 1000px){
+
   .info_card{
     display: inline-block;
   }
-  .info_card img{
-    max-width: 350px;
+
+  .info_card .kecImg{
+    width: 450px;
+    height: 350px;
     float:right;
     margin: 2em;
   }
@@ -623,15 +640,8 @@ form.contact-form button:hover{
   nav > span > img{
     height: 3em;
   }
-  .info_card{
-    min-height:60vh;
+  div.aboutPage>div{
     display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .info_card img{
-    float: right;
-    margin-left: 5em;
   }
   h1#eventName{
     position: relative;
@@ -657,11 +667,6 @@ form.contact-form button:hover{
     position: absolute;
     right:-14%;
     top:0;
-  }
-
-  .info_card div{
-    margin: 1em;
-    display: inline;
   }
   div#countdown{
     font-size: 6vw;
@@ -692,11 +697,26 @@ form.contact-form button:hover{
     max-width: 600px;
   }
   div.small_cards{
+    min-width: 22vw;
     display:flex;
+    flex-direction:column;
     font-size: 0.7em;
   }
+
+  .info_card{
+    display: inline-block;
+  }
+  .info_card .kecImg{
+    min-width: 50vw;
+    margin:1em;
+    height: 350px;
+    background-size: cover;
+    float:right;
+  }
+
   div.info_card_small{
     flex:1;
+    flex-direction:column;
   }
 
   #view-on-map{
@@ -738,10 +758,6 @@ form.contact-form button:hover{
     padding: 1em;
   }
 
-
-  form.contact-form input{
-    width: 30vw;
-  }
 }
 
 @keyframes curveIn{
