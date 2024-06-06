@@ -1,0 +1,27 @@
+:root{
+  --color1: #2270A5;
+  --color2: #000000;
+  --color-1: #ffffff;
+}
+
+li{
+  list-style: none;
+}
+
+
+nav.topNav{
+  position: fixed;
+  width: 50vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  background-color:var(--color2) ;
+  color: var(--color-1);
+  padding: 1em;
+  border-radius: 50%;
+}
+
+nav.topNav li {
+  position: absolute;
+}

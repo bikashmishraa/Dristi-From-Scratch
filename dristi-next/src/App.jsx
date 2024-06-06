@@ -1,13 +1,17 @@
 import { useState } from 'react'
 import './App.css'
 import Countdown from './countdown/Countdown.jsx'
+import { useState } from 'react';
+// import 'Countdown'
+import Nav from './Nav/Nav.jsx';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
      <Countdown/>
+      <Nav/>
     </>
   );
 }
