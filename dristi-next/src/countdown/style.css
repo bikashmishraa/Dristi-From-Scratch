@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+
+.countdown{
+    font-family: "Monomaniac One", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+}
+.dayshour{
+    position: relative;
+    color: #81BCE4;
+
+}
+.dayshour::after{
+    content: "Hour";
+    position: absolute;
+    top: -0.5rem;
+    left: 52%;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+.dayshour::before{
+    content: "Days";
+    position: absolute;
+    top: -0.5rem;
+    right: 50%;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+.minsec{
+    color: #81BCE4;
+    position: relative;
+}
+.minsec::after{
+    content: "secs";
+    position: absolute;
+    top: -0.5rem;
+    left: 52%;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+.minsec::before{
+    content: "mins";
+    position: absolute;
+    top: -0.5rem;
+    right: 50%;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
