@@ -1,9 +1,19 @@
+*{
+  box-sizing: border-box;
+}
 :root{
-  --color1: #2270A5;
+  --color1: #81BCE4;
+  --color1a: #2270A5;
+  --color1e: #29B1EA;
   --color2: #000000;
+  --color3: #090f11;
+  --color4: #0d161b;
+  --color4a: #0F2227;
   --color-1: #ffffff;
 }
-
+body,html{
+  background: var(--color3);
+}
 li{
   list-style: none;
 }
@@ -16,12 +26,131 @@ nav.topNav{
   left: 50%;
   transform: translate(-50%, -50%);
   aspect-ratio: 1;
-  background-color:var(--color2) ;
+  clip-path: circle(50%);
+  background: var(--color4);
   color: var(--color-1);
   padding: 1em;
+  margin: 5px;
   border-radius: 50%;
+}
+nav.topNav::after{
+  content:"";
+  width: 49vmin;
+  height: 49vmin;
+  border-radius: 50%;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  pointer-events: none;
+  background: transparent;
+}
+span.disc{
+  /* content:""; */
+  width: 22vmin;
+  height: 22vmin;
+  border-radius: 50%;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border:  2px dashed var(--color4a);
+
+  display:flex;
+  padding: 7vmin;
+  background-color: var(--color4);
+}
+span.disc>img{
+  filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(160deg);
 }
 
 nav.topNav li {
-  position: absolute;
+  background:var(--color4);
+  position: fixed;
+  z-index:2;
+  --h: 26vmin;
+  width: calc(var(--h));
+  height: var(--h);
+  top: calc(50% - var(--h)/2);
+  right: calc(50% - var(--h)/2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 7vmin;
+  padding-right: 7vmin;
 }
+
+nav.topNav:hover li>img{
+  opacity: 0.4;
+}
+
+nav.topNav li>img{
+  pointer-events: none;
+  height: 60px;
+  aspect-ratio:1;
+  filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(160deg);
+  transition: 0.1s linear;
+}
+
+nav.topNav li:hover>img{
+  height: 80px;
+  opacity: 1;
+  }
+
+
+li.onHover:hover img{
+  filter:  sepia(100%) saturate(300%) brightness(10%) hue-rotate(150deg);
+}
+
+header.topNavContainer{
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  top:0;
+  left:0;
+  background: transparent;
+  backdrop-filter: blur(25px);
+}
+header.topNavContainer div.navText{
+  position: fixed;
+  bottom: 5vh;
+  left: 50%;
+  transform: translate(-50%,0);
+  font-size: 10rem;
+  color: transparent;
+  opacity: 0.5;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: var(--color1);
+
+  text-shadow: 13px 13px 0 var(--color1);
+  transition: 0.1s linear;
+}
+header.topNavContainer div.navText:hover{
+  opacity: 1.0;
+}
+
+nav.topNav li.onHover{
+  background: var(--color1);
+  animation-name: flicker;
+  animation-duration: 0.2s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+}
+
+@keyframes flicker {
+  0%{
+    background: var(--color1a);
+  }
+  40%{
+    background: var(--color4);
+  }
+  100%{
+
+    background-image: linear-gradient(45deg, var(--color1), var(--color1e));
+  }
+}
+

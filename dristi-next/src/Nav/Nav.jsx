@@ -1,28 +1,73 @@
 import "./Nav.css";
 import {sin, cos} from 'mathjs';
+import { useState } from 'react'
+import {sin, cos, pi, min} from 'mathjs'
 
 function Nav() {
-  let link_events = "https://img.icons8.com/?size=100&id=hO8FWC0uqKZ1&format=png&color=FFFFFF";
-  let link_aboutUs = "https://img.icons8.com/?size=100&id=hSqH00VDLIBm&format=png&color=FFFFFF";
-  let link_contactUs = "https://img.icons8.com/?size=100&id=vUrsmTHgHKwZ&format=png&color=FFFFFF";
-  let link_members = "https://img.icons8.com/?size=100&id=TOXaloxW5Kv3&format=png&color=FFFFFF";
-  let link_notices = "https://img.icons8.com/?size=100&id=5P2vUcSRZgZt&format=png&color=FFFFFF";
-  let circ_angle_diff = 360/5;
-  let circ_pos_1 = [sin(0), cos(0)];
-  let circ_pos_2 = [sin(circ_angle_diff), cos(circ_angle_diff)];
-  let circ_pos_3 = [sin(circ_angle_diff*3), cos(circ_angle_diff*3)];
-  let circ_pos_4 = [sin(circ_angle_diff*4), cos(circ_angle_diff*4)];
-  let circ_pos_5 = [sin(circ_angle_diff*5), cos(circ_angle_diff*5)];
-  let circ_pos_6 = [sin(circ_angle_diff*6), cos(circ_angle_diff*6)];
-  return (
-    <nav className="topNav">
-      <li><img src={link_events} alt="Events"/></li>
-      <li><img src={link_aboutUs} alt="About Us"/></li>
-      <li><img src={link_contactUs} alt="Contact Us"/></li>
-      <li><img src={link_members} alt="Members"/></li>
-      <li><img src={link_notices} alt="Notices"/></li>
-    </nav>
-  )
+  // Links
+  // Hard defined vars
+  let c_radDif = 2*pi/5;
+  let c_angDif = 360/5;
+  let [currOpt, setOpt] = useState("Navigation");
+  let [navDisplay, setDisplay] = useState("block");
+
+  const li_properties = [
+    {id:1, link: "src/assets/member.png", name: "Members"},
+    {id:2, link: "src/assets/info.png", name: "About"},
+    {id:3, link: "src/assets/contact.png", name: "Contacts"},
+    {id:4, link: "src/assets/notice.png", name: "Notice"},
+    {id:5, link: "src/assets/events.png", name: "Events"},
+  ]
+  const lis = li_properties.map(pr => <li className="navMenu" key={pr.id} 
+    // About, Members, Contact Us, Events, Notices
+
+    onMouseOver={(e)=>{
+
+        e.target.className="onHover"
+
+        if(pr.id == 1){
+          e.target.offsetParent.lastChild.style.zIndex="1"
+          e.target.offsetParent.firstChild.style.zIndex="2"
+        } else if(pr.id == 5){
+          e.target.offsetParent.lastChild.style.zIndex="2"
+          e.target.offsetParent.firstChild.style.zIndex="3"
+        }else{
+          e.target.offsetParent.lastChild.style.zIndex="2"
+          e.target.offsetParent.firstChild.style.zIndex="2"
+        }
+      setOpt(pr.name);
+    }}
+    onMouseOut={(e)=>{
+      e.target.className=""
+      setOpt("Navigation")
+    }} 
+    style={{
+      transform: `rotate(${(c_angDif)*(pr.id)}deg) translate(-50%,-50%) skew(${c_angDif*2}deg)`,
+    }}>
+    <img src={pr.link} style = {{transform: `skew(-${c_angDif*2}deg) rotate(${-(c_angDif)*(pr.id)}deg)`}}/>
+    </li>)
+
+
+      return (
+        <>
+        <div className="NavOpener" onClick={(e)=>{
+             setDisplay("block")
+          }}>
+        <img src="/src/assets/code.png" alt="Nav" />
+        </div>
+        <header className="topNavContainer" style={{display: navDisplay}}>
+        <div className="navText">{currOpt}</div>
+          <nav className="topNav">
+          {lis}
+          </nav>             
+          <span className="disc" onClick={(e)=>{
+             setDisplay("none")
+          }}>
+            <img src="src/assets/close.png" alt="" />
+          </span>
+        </header>
+        </>
+      )
 }
 
 export default Nav
