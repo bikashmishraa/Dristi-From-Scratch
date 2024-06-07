@@ -4,27 +4,42 @@
     font-family: "Monomaniac One", sans-serif;
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
-}
-.dayshour{
-    position: relative;
-    color: #81BCE4;
+    font-size: 6rem;
+    align-items: center;
+    justify-content: space-evenly;
 
 }
+.codesymb{
+    transform: translate(0, -50px);
+    height: auto;
+    width: 50px; 
+}
+.countdownObj{
+    display: flex;
+    flex-direction: column;
+}
+.notcountdown{
+    font-size: 1.3rem;
+    color: #81BCE4;
+}
+.dayshour{
+    position: relative;   
+    color: #81BCE4;
+}
 .dayshour::after{
-    content: "Hour";
+    content: "hour";
     position: absolute;
     top: -0.5rem;
-    left: 52%;
-    font-size: 0.8rem;
+    left: 60%;
+    font-size: 0.4em;
     opacity: 0.5;
 }
 .dayshour::before{
-    content: "Days";
+    content: "days";
     position: absolute;
     top: -0.5rem;
-    right: 50%;
-    font-size: 0.8rem;
+    right: 53%;
+    font-size: 0.4em;
     opacity: 0.5;
 }
 .minsec{
@@ -35,15 +50,35 @@
     content: "secs";
     position: absolute;
     top: -0.5rem;
-    left: 52%;
-    font-size: 0.8rem;
+    left: 60%;
+    font-size: 0.4em;
     opacity: 0.5;
 }
 .minsec::before{
     content: "mins";
     position: absolute;
     top: -0.5rem;
-    right: 50%;
-    font-size: 0.8rem;
+    right: 54%;
+    font-size: 0.4em;
     opacity: 0.5;
+}
+.mouseimg{
+    padding-top: 50px;
+    height: auto;
+    width: 50px; 
+    filter: invert(100%);
+    opacity: 0.7;
+    animation-name: mouseJump;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate; 
+}
+@keyframes mouseJump{
+    0% {
+        transform: translate(0px, 50px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
 }

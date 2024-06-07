@@ -28,13 +28,20 @@ setInterval(() =>{
 },1000 )
 
     return(
-        <div className="countdown">
-            <div className='dayshour'>
-                {days}:{hours}
+        <div className='countdown'>
+            <img className='codesymb' src="src/assets/image 1.png" alt="code symbol" />
+            <div className='countdownObj'>
+                <div className='dayshour'>
+                    {days}:{hours}
+                </div>
+                <div className='minsec'>
+                    {mins}:{secs}
+                </div>
             </div>
-            <div className='minsec'>
-                {mins}:{secs}
+            <div className="notcountdown">
+                left for <br />next event
             </div>
+            <img className = "mouseimg" src="src/assets/m1.png" alt="mouse img" />
         </div>
         );
         
