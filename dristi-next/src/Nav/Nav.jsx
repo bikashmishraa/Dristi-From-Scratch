@@ -1,5 +1,4 @@
 import "./Nav.css";
-import {sin, cos} from 'mathjs';
 import { useState } from 'react'
 import {sin, cos, pi, min} from 'mathjs'
 
@@ -9,7 +8,7 @@ function Nav() {
   let c_radDif = 2*pi/5;
   let c_angDif = 360/5;
   let [currOpt, setOpt] = useState("Navigation");
-  let [navDisplay, setDisplay] = useState("block");
+  let [navDisplay, setDisplay] = useState("none");
 
   const li_properties = [
     {id:1, link: "src/assets/member.png", name: "Members"},
@@ -23,18 +22,18 @@ function Nav() {
 
     onMouseOver={(e)=>{
 
-        e.target.className="onHover"
+      e.target.className="onHover"
 
-        if(pr.id == 1){
-          e.target.offsetParent.lastChild.style.zIndex="1"
-          e.target.offsetParent.firstChild.style.zIndex="2"
-        } else if(pr.id == 5){
-          e.target.offsetParent.lastChild.style.zIndex="2"
-          e.target.offsetParent.firstChild.style.zIndex="3"
-        }else{
-          e.target.offsetParent.lastChild.style.zIndex="2"
-          e.target.offsetParent.firstChild.style.zIndex="2"
-        }
+      if(pr.id == 1){
+        e.target.offsetParent.lastChild.style.zIndex="1"
+        e.target.offsetParent.firstChild.style.zIndex="2"
+      } else if(pr.id == 5){
+        e.target.offsetParent.lastChild.style.zIndex="2"
+        e.target.offsetParent.firstChild.style.zIndex="3"
+      }else{
+        e.target.offsetParent.lastChild.style.zIndex="2"
+        e.target.offsetParent.firstChild.style.zIndex="2"
+      }
       setOpt(pr.name);
     }}
     onMouseOut={(e)=>{
@@ -48,26 +47,29 @@ function Nav() {
     </li>)
 
 
-      return (
-        <>
-        <div className="NavOpener" onClick={(e)=>{
-             setDisplay("block")
-          }}>
-        <img src="/src/assets/code.png" alt="Nav" />
-        </div>
-        <header className="topNavContainer" style={{display: navDisplay}}>
-        <div className="navText">{currOpt}</div>
-          <nav className="topNav">
-          {lis}
-          </nav>             
-          <span className="disc" onClick={(e)=>{
-             setDisplay("none")
-          }}>
-            <img src="src/assets/close.png" alt="" />
-          </span>
-        </header>
-        </>
-      )
+  return (
+    <>
+    <img src="src/assets/logo.png" className='logo'/>
+    <div className="NavOpener" onClick={(e)=>{
+      setDisplay("block")
+    }}>
+    <img src="/src/assets/code.png" alt="Nav" />
+    </div>
+    <header className="topNavContainer" style={{display: navDisplay}}>
+    <div className="navText">{currOpt}</div>
+
+    <nav className="topNav">
+    {lis}
+    </nav>
+
+    <span className="disc" onClick={(e)=>{
+      setDisplay("none")
+    }}>
+    <img src="src/assets/close.png" alt="" />
+    </span>
+    </header>
+    </>
+  )
 }
 
 export default Nav

@@ -1,6 +1,3 @@
-*{
-  box-sizing: border-box;
-}
 :root{
   --color1: #81BCE4;
   --color1a: #2270A5;
@@ -11,13 +8,26 @@
   --color4a: #0F2227;
   --color-1: #ffffff;
 }
-body,html{
-  background: var(--color3);
-}
+
+
 li{
   list-style: none;
 }
 
+div.NavOpener{
+  position: fixed;
+  top:10vh;
+}
+div.NavOpener>img{
+  height: 4rem;
+}
+
+img.logo{
+  position: fixed;
+  top: 7vh;
+  left: 5vw;
+  height: 3rem;
+}
 
 nav.topNav{
   position: fixed;
@@ -106,6 +116,7 @@ li.onHover:hover img{
 
 header.topNavContainer{
   position: fixed;
+  z-index:4;
   width:100vw;
   height:100vh;
   top:0;

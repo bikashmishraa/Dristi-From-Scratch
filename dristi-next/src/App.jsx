@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
+     <Nav/>
      <Countdown/>
-      <Nav/>
     </>
   );
 }
