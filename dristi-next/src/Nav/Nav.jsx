@@ -25,14 +25,14 @@ function Nav() {
       e.target.className="onHover"
 
       if(pr.id == 1){
-        e.target.offsetParent.lastChild.style.zIndex="1"
-        e.target.offsetParent.firstChild.style.zIndex="2"
+        e.target.parentElement.lastChild.style.zIndex="1"
+        e.target.parentElement.firstChild.style.zIndex="2"
       } else if(pr.id == 5){
-        e.target.offsetParent.lastChild.style.zIndex="2"
-        e.target.offsetParent.firstChild.style.zIndex="3"
+        e.target.parentElement.lastChild.style.zIndex="2"
+        e.target.parentElement.firstChild.style.zIndex="3"
       }else{
-        e.target.offsetParent.lastChild.style.zIndex="2"
-        e.target.offsetParent.firstChild.style.zIndex="2"
+        e.target.parentElement.lastChild.style.zIndex="2"
+        e.target.parentElement.firstChild.style.zIndex="2"
       }
       setOpt(pr.name);
     }}
