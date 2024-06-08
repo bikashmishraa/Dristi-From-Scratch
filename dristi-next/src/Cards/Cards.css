@@ -1,27 +1,59 @@
 .glassCards{
   padding: 10vh;
-  border-radius: 20vh;
+  border-radius: 10vh;
   color: var(--color1);
   font-family: "Quicksand";
-  margin: auto;
   font-weight: bold;
+  margin: 0;
+}
+
+.glassCards#one{
+  width: 30rem;
+  margin-top: -20vh;
+}
+.glassCards#two{
+  width: 30rem;
+  margin-top: 10vh;
+  margin-bottom: -10vh;
+}
+.glassCards#image{
+  position: absolute;
+  top: 40vh;
+  right: 10vw;
+}
+.glassCards#image>img{
+  width: 30rem;
+  border-radius:  10vh;
+  box-shadow: var(--color1a) 0 4px 30px 0;
+  opacity: 0.7;
 }
 
 .glassCards .cardTitle{
   font-family: "JetBrains Mono", monospace;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin: 3rem;
+  margin-top: 0rem;
 }
 
 .glassCards#circleButtons{
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 50%;
   justify-content: center;
-  height: 40vh;
+  height: 50vh;
   aspect-ratio: 1;
-  transform: translate(0, -70%);
+  transform: translate(0, -40%);
+}
+#circleButtons::before{
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -8vh);
+  font-size: 3rem;
+  content: "ꜜ";
 }
 
 button{
@@ -29,15 +61,17 @@ button{
   padding: 1rem;
   border-radius: 1rem;
   margin: 2px;
-  width: 8rem;
+  width: 10rem;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bold;
+  cursor: pointer;
 }
 button.activated{
-  background-color: var(--color1e);
-  color: var(--color4);
+  background-color: var(--color1a);
+  color: var(--color1);
 }
 button.deactivated{
-  border: 3px solid var(--color1e);
+  border: 3px solid var(--color1a);
   background-color:transparent;
-  color: var(--color1e);
-
+  color: var(--color1);
 }

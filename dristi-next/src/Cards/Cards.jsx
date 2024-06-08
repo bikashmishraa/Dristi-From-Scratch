@@ -12,11 +12,17 @@ function Cards(props){
         </div>
     )
 
+  }else if(props.id=="image"){
+    return(
+      <div className="glassCards" id={props.id}>
+        <img src={props.src}/>
+       </div>
+    )
   }
   return(
-    <div className="glassCards" id={props.id}>
-    <div className="cardTitle">{props.title}</div>
-    <div className="cardContent">{props.content}</div>
+    <div className="glassCards glass" id={props.id}>
+      <div className="cardTitle">{props.title}</div>
+      <div className="cardContent">{props.content}</div>
     </div>
   )
 }
