@@ -23,5 +23,21 @@
   aspect-ratio: 1;
   transform: translate(0, -70%);
 }
-.glassCards#one{
+
+button{
+  border:none;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 2px;
+  width: 8rem;
+}
+button.activated{
+  background-color: var(--color1e);
+  color: var(--color4);
+}
+button.deactivated{
+  border: 3px solid var(--color1e);
+  background-color:transparent;
+  color: var(--color1e);
+
 }
