@@ -7,7 +7,7 @@ function Nav() {
   // Hard defined vars
   let c_radDif = 2*pi/5;
   let c_angDif = 360/5;
-  let [currOpt, setOpt] = useState("Navigation");
+  let [currOpt, setOpt] = useState("");
   let [navDisplay, setDisplay] = useState("hidden");
 
   const li_properties = [
@@ -21,8 +21,6 @@ function Nav() {
     // About, Members, Contact Us, Events, Notices
 
     onMouseOver={(e)=>{
-
-      e.target.className="onHover"
 
       if(pr.id == 1){
         e.target.parentElement.lastChild.style.zIndex="1"
@@ -38,7 +36,7 @@ function Nav() {
     }}
     onMouseOut={(e)=>{
       e.target.className=""
-      setOpt("Navigation")
+      setOpt("")
     }} 
     style={{
       transform: `rotate(${(c_angDif)*(pr.id)}deg) translate(-50%,-50%) skew(${c_angDif*2}deg)`,

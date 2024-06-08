@@ -6,6 +6,19 @@
   box-sizing: border-box;
 }
 
+:root{
+  --color1: #81BCE4;
+  --color1a: #2270A5;
+  --color1e: #29B1EA;
+  --color2: #000000;
+  --color3: #090f11;
+  --color4: #0d161b;
+  --color4a: #0F2227;
+  --color-1: #ffffff;
+}
+
+
+
 html, body{
   min-height: 100vh;
   min-width: 100vw;
@@ -20,10 +33,18 @@ html, body{
   text-align: center;
   font-family: Quicksand, sans-serif;
   position: relative;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
-.countdown{
-  margin: 0;
+
+.glass{
+  background: radial-gradient( rgba(34, 112, 165, 0.4), rgba(34, 112, 165, 0.1));;
+  backdrop-filter: blur(15px);
+  border: 1px solid #236490;
+}
+.pageContent{
+  border-radius: 20vw;
+  height: 100vh;
+  background-color: #0E1E28;
+  margin: 5vw;
 }

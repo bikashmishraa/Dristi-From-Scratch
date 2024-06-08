@@ -1,7 +1,6 @@
-import './App.css'
 import Countdown from './countdown/Countdown.jsx'
 import Nav from './Nav/Nav.jsx';
-import Mouse from './Mouse/Mouse.jsx';
+import Cards from './Cards/Cards.jsx';
 import './App.css';
 
 function App() {
@@ -10,7 +9,10 @@ function App() {
     <>
      <Nav/>
      <Countdown/>
-     <Mouse/>
+     <div className="pageContent">
+       <Cards id="circleButtons" title= "KEC IT Club" button1="About Us" button2="Contact Us"/>
+       <Cards id="one" title= "Our Identity" content="the members on our team are this this and thiss..."/>
+      </div>
     </>
   );
 }

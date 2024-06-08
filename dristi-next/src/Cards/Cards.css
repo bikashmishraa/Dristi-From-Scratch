@@ -1,0 +1,27 @@
+.glassCards{
+  padding: 10vh;
+  border-radius: 20vh;
+  color: var(--color1);
+  font-family: "Quicksand";
+  margin: auto;
+  font-weight: bold;
+}
+
+.glassCards .cardTitle{
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.glassCards#circleButtons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  height: 40vh;
+  aspect-ratio: 1;
+  transform: translate(0, -70%);
+}
+.glassCards#one{
+}
