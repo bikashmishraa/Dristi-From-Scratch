@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 *{
   box-sizing: border-box;
@@ -17,7 +18,7 @@ html, body{
   padding: 0;
   background-color: #090f11;
   text-align: center;
-  font-family: monospace;
+  font-family: Quicksand, sans-serif;
   position: relative;
   display: flex;
   justify-content: center;

@@ -8,7 +8,7 @@ function Nav() {
   let c_radDif = 2*pi/5;
   let c_angDif = 360/5;
   let [currOpt, setOpt] = useState("Navigation");
-  let [navDisplay, setDisplay] = useState("none");
+  let [navDisplay, setDisplay] = useState("hidden");
 
   const li_properties = [
     {id:1, link: "src/assets/member.png", name: "Members"},
@@ -51,11 +51,11 @@ function Nav() {
     <>
     <img src="src/assets/logo.png" className='logo'/>
     <div className="NavOpener" onClick={(e)=>{
-      setDisplay("block")
+      setDisplay("PopIn")
     }}>
     <img src="/src/assets/code.png" alt="Nav" />
     </div>
-    <header className="topNavContainer" style={{display: navDisplay}}>
+    <header className={"topNavContainer "+ navDisplay}>
     <div className="navText">{currOpt}</div>
 
     <nav className="topNav">
@@ -63,7 +63,7 @@ function Nav() {
     </nav>
 
     <span className="disc" onClick={(e)=>{
-      setDisplay("none")
+      setDisplay("hidden")
     }}>
     <img src="src/assets/close.png" alt="" />
     </span>

@@ -1,5 +1,5 @@
  import {useState} from 'react';
- import './style.css'
+ import './Countdown.css'
  function Countdown(){
     
 // const deadline = new Date('May 15 24 00:00:00');

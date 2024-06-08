@@ -1,3 +1,4 @@
+
 :root{
   --color1: #81BCE4;
   --color1a: #2270A5;
@@ -117,6 +118,7 @@ li.onHover:hover img{
 header.topNavContainer{
   position: fixed;
   z-index:4;
+  font-family: "Monomaniac One", sans-serif;
   width:100vw;
   height:100vh;
   top:0;
@@ -152,6 +154,20 @@ nav.topNav li.onHover{
   animation-delay: 0;
 }
 
+.hidden{
+  animation-name: swoopOut;
+  animation-fill-mode: forwards;
+  animation-duration: 1.0s;
+  animation-timing-function: ease;
+  pointer-events: none;
+}
+.PopIn{
+  animation-name: swoopIn;
+  animation-duration: 1.0s;
+  animation-timing-function: ease;
+  pointer-events: full;
+}
+
 @keyframes flicker {
   0%{
     background: var(--color1a);
@@ -165,3 +181,20 @@ nav.topNav li.onHover{
   }
 }
 
+@keyframes swoopIn{
+  0%{
+    top:-100vw;
+  }
+  100%{
+    top: 0;
+  }
+}
+@keyframes swoopOut{
+  0%{
+    top:0vw;
+  }
+  100%{
+    top: -100vw;
+    display:none;
+  }
+}

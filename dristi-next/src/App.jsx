@@ -1,7 +1,7 @@
 import './App.css'
 import Countdown from './countdown/Countdown.jsx'
-// import 'Countdown'
 import Nav from './Nav/Nav.jsx';
+import Mouse from './Mouse/Mouse.jsx';
 import './App.css';
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
     <>
      <Nav/>
      <Countdown/>
+     <Mouse/>
     </>
   );
 }
