@@ -64,7 +64,7 @@ function Nav() {
     }} 
     style = {navStyle}
     >
-    <img src="/src/assets/code.png" alt="Nav" />
+    <img src="src/assets/code.png" alt="Nav" />
     </div>
     <header className={"topNavContainer "+ navDisplay} >
     <div className="navText">{currOpt}</div>
