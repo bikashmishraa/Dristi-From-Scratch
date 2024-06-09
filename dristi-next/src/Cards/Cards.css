@@ -45,7 +45,6 @@
   justify-content: center;
   height: 50vh;
   aspect-ratio: 1;
-  transform: translate(0, -40%);
 }
 #circleButtons::before{
   position: absolute;

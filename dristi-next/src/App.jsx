@@ -6,6 +6,7 @@ import './App.css';
 import Lenis from 'lenis'
 
 function App() {
+
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.1,
@@ -22,7 +23,6 @@ function App() {
 
     requestAnimationFrame(raf)
   }, [])
-
 
   return (
     <>
