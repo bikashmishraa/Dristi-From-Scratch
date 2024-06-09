@@ -4,6 +4,7 @@
 
 *{
   box-sizing: border-box;
+  scrollbar-width: none;
 }
 
 :root{
@@ -40,8 +41,8 @@ html, body{
 
 .glass{
   background: radial-gradient( rgba(34, 112, 165, 0.46) 0%, rgba(34, 112, 165, 0.1) 100%) ;
-  box-shadow: rgba(9, 15, 17,0.45) 0 4px 20px 0, inset rgba(9,15,17,0.45) 0 4px 50px 0;
-  backdrop-filter: blur(15px);
+  /* box-shadow: rgba(9, 15, 17,0.45) 0 4px 20px 0, inset rgba(9,15,17,0.45) 0 4px 50px 0; */
+  backdrop-filter: blur(25px);
   border: 1px solid #236490;
 }
 .pageContent{
@@ -50,7 +51,11 @@ html, body{
   height: 110vh;
   padding-left: 10vw;
   padding-right: 10vw;
+  background: url('src/assets/bg_grid.png') right bottom no-repeat, url('src/assets/bg_grid2.png') left top no-repeat;
   background-color: #0E1E28;
+  /* background-position: center; */
+  background-size: 30vw;
+  background-repeat: no-repeat;
   margin: 5vw;
 }
 
@@ -74,4 +79,11 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+@media (max-width: 1000px){
+
+  .pageContent{
+    height: 150vh;
+  }
 }

@@ -159,9 +159,9 @@ header.topNavContainer div.navText{
   left: 50%;
   transform: translate(-50%, calc(26vmin - 20%));
   font-size: 8rem;
-  color: var(--color4);
+  color: rgba(34, 112, 165, 0.26);
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--color4a);
+  -webkit-text-stroke-color: var(--color1a);
   transition: 0.1s linear;
 }
 header.topNavContainer div.navText:hover{
