@@ -51,7 +51,7 @@ html, body{
   height: 110vh;
   padding-left: 10vw;
   padding-right: 10vw;
-  background: url('src/assets/bg_grid.png') right bottom no-repeat, url('src/assets/bg_grid2.png') left top no-repeat;
+  background: url('../public/bg_grid.png') right bottom no-repeat, url('../public/bg_grid2.png') left top no-repeat;
   background-color: #0E1E28;
   /* background-position: center; */
   background-size: 30vw;

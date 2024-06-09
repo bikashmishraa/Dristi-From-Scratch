@@ -1,5 +1,7 @@
- import {useState} from 'react';
- import './Countdown.css'
+import {useState} from 'react';
+import './Countdown.css'
+import mouseIng from '/m1.png'
+
  function Countdown(){
     
 // const deadline = new Date('May 15 24 00:00:00');
@@ -41,7 +43,7 @@ setInterval(() =>{
             <div className="notcountdown">
                 left for <br />next event
             </div>
-            <img className = "mouseimg" src="src/assets/m1.png" alt="mouse img" />
+            <img className = "mouseimg" src={ mouseIng } alt="mouse img" />
         </div>
       </>
         );
