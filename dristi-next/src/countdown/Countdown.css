@@ -1,0 +1,84 @@
+
+.countdown{
+    font-family: "Monomaniac One", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-size: 6rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.countdownObj{
+    display: flex;
+    flex-direction: column;
+}
+.notcountdown{
+    font-size: 1.3rem;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    color: var(--color1);
+}
+.dayshour{
+    position: relative;   
+    color: var(--color1);
+}
+.dayshour::after{
+    color: var(--color1a);
+    content: "hour";
+    position: absolute;
+    top: -0.5rem;
+    left: 60%;
+    font-size: 0.4em;
+}
+.dayshour::before{
+    color: var(--color1a);
+    content: "days";
+    position: absolute;
+    top: -0.5rem;
+    right: 53%;
+    font-size: 0.4em;
+}
+.minsec{
+    color: var(--color1);
+    position: relative;
+}
+.minsec::after{
+    color: var(--color1a);
+    content: "secs";
+    position: absolute;
+    top: -0.5rem;
+    left: 60%;
+    font-size: 0.4em;
+}
+.minsec::before{
+    color: var(--color1a);
+    content: "mins";
+    position: absolute;
+    top: -0.5rem;
+    right: 54%;
+    font-size: 0.4em;
+}
+.mouseimg{
+    padding-top: 50px;
+    height: auto;
+    width: 50px; 
+    filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(130deg);
+    z-index: 0;
+    opacity: 0.7;
+    animation-name: mouseJump;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate; 
+    position: relative;
+}
+
+@keyframes mouseJump{
+    0% {
+        transform: translate(0px, 80px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}

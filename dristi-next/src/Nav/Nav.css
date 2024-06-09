@@ -1,0 +1,216 @@
+li{
+  list-style: none;
+}
+
+div.NavOpener{
+  position: absolute;
+  top:10vh;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%,0);
+  border-radius: 50%;
+  box-shadow: var(--color3) 0 0 12px 2px;
+  background-color: var(--color3);
+  display:flex;
+  padding: 3vmin;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+.fixedNavBar{
+  position: fixed;
+  top:5vh;
+}
+
+div.NavOpener:hover{
+  background-color: var(--color1);
+}
+
+div.NavOpener>img{
+  filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(160deg);
+  height: 4rem;
+  transition: 0.2s ease;
+}
+
+div.NavOpener:hover>img{
+  filter: sepia(100%) saturate(300%) brightness(10%) hue-rotate(160deg);
+  height: 4rem;
+}
+img.logo{
+  position: fixed;
+  top: 7vh;
+  left: 5vw;
+  height: 3rem;
+}
+
+nav.topNav{
+  position: fixed;
+  width: 50vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  clip-path: circle(50%);
+  background: var(--color4);
+  color: var(--color-1);
+  padding: 1em;
+  margin: 5px;
+  border-radius: 50%;
+}
+nav.topNav::after{
+  content:"";
+  width: 49.5vmin;
+  height: 49.5vmin;
+  border-radius: 50%;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset var(--color3) 0 0 42px 20px;
+  opacity: 0.5;
+  z-index: 7;
+  pointer-events: none;
+  background: transparent;
+}
+span.disc{
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  /* border:  2px solid var(--color4a); */
+  box-shadow: var(--color3) 0 0 12px 2px;
+  background-color: var(--color3);
+  display:flex;
+  padding: 7vmin;
+  cursor: pointer;
+}
+span.disc:hover{
+  box-shadow: var(--color3) 0 0 12px 5px;
+}
+span.disc:hover>img{
+  filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(160deg);
+}
+
+
+span.disc>img{
+  filter: sepia(100%) saturate(300%) brightness(40%) hue-rotate(160deg);
+}
+
+nav.topNav li {
+  background:var(--color4);
+  position: fixed;
+  z-index:2;
+  --h: 26vmin;
+  width: calc(var(--h));
+  height: var(--h);
+  top: calc(50% - var(--h)/2);
+  right: calc(50% - var(--h)/2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 7vmin;
+  padding-right: 7vmin;
+}
+
+nav.topNav:hover li>img{
+  opacity: 0.4;
+}
+
+nav.topNav li>img{
+  pointer-events: none;
+  height: 60px;
+  aspect-ratio:1;
+  filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(160deg);
+  transition: 0.1s linear;
+}
+
+nav.topNav li:hover{
+  background-color: var(--color3);
+}
+
+nav.topNav li:hover>img{
+  height: 80px;
+  opacity: 1;
+  filter:  sepia(100%) saturate(300%) brightness(100%) hue-rotate(150deg);
+  }
+
+
+header.topNavContainer{
+  position: fixed;
+  z-index:4;
+  font-family: "Monomaniac One", sans-serif;
+  border-radius: 50%;
+  height:130vmax;
+  background-color: var(--color3);
+  overflow: hidden;
+  aspect-ratio:1;
+
+  top:50%;
+  transform: translate(-50%,-50%);
+  left:50%;
+}
+
+header.topNavContainer div.navText{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(26vmin - 20%));
+  font-size: 8rem;
+  color: rgba(34, 112, 165, 0.26);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--color1a);
+  transition: 0.1s linear;
+}
+header.topNavContainer div.navText:hover{
+  opacity: 1.0;
+}
+
+/* nav.topNav li.onHover{ */
+/*   background: var(--color1); */
+/* } */
+
+.hidden{
+  animation-name: swoopOut;
+  animation-fill-mode: forwards;
+  animation-duration: 1.0s;
+  animation-timing-function: ease;
+  pointer-events: none;
+}
+.PopIn{
+  animation-name: swoopIn;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  pointer-events: auto;
+}
+
+@keyframes swoopIn{
+  0%{
+    clip-path: circle(0vmax);
+  }
+  100%{
+    clip-path: circle(110vmax);
+  }
+}
+@keyframes swoopOut{
+  0%{
+    clip-path: circle(110vmax);
+  }
+  100%{
+    clip-path: circle(0vmax);
+  }
+}
+
+@keyframes rotateClockwise{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg) ;
+  }
+  50%{
+    transform: translate(-50%, -50%) rotate(-180deg) ;
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(-359deg) ;
+  }
+}
