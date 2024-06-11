@@ -74,13 +74,22 @@ button{
 button.activated{
   background-color: var(--color1a);
   color: var(--color1);
+  border: 3px solid var(--color1a);
+  transition: 0.2s;
 }
 button.deactivated{
   border: 3px solid var(--color1a);
   background-color:transparent;
   color: var(--color1);
+  transition: 0.2s;
+}
+button.deactivated:hover{
+  width: 11rem;
 }
 
+button.activated:hover{
+  width: 11rem;
+  }
 
 @media (max-width: 1000px) {
 
