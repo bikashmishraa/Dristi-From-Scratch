@@ -49,6 +49,19 @@ function App() {
           content="the members on our team are this this and thiss..."
         />
       </div>
+
+      <div className="pageContent">
+        <Cards
+          id="one"
+          title="Our Identity"
+          content="the members on our team are this this and thiss..."
+        />
+        <Cards
+          id="two"
+          title="Our Projects"
+          content="the members on our team are this this and thiss..."
+        />
+      </div>
     </>
   );
 }

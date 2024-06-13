@@ -1,9 +1,9 @@
 import "./Cards.css";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, useRef } from "react";
 
 function Cards(props) {
   const [changeInTransform, setChangeInTransform] = useState();
-  const vh = window.document.body.clientHeight / 100;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +25,7 @@ function Cards(props) {
         className="glassCards glass"
         id={props.id}
         style={{
-          transform: `translate(0, ${-0.1 * 50 * vh - changeInTransform}px)`,
+          transform: `translate(0, calc(-20vh - ${changeInTransform}px))`,
         }}
       >
         <div className="cardTitle">{props.title}</div>
@@ -41,7 +41,7 @@ function Cards(props) {
         className="glassCards"
         id={props.id}
         style={{
-          transform: `translate(0, ${-0.1 * 50 * vh - changeInTransform * 0.5}px)`,
+          transform: `translate(0, calc(-20vh - ${changeInTransform}px))`,
         }}
       >
         <img src={props.src} />
@@ -53,7 +53,7 @@ function Cards(props) {
       className="glassCards glass"
       id={props.id}
       style={{
-        transform: `translate(0, ${-changeInTransform}px)`,
+        transform: `translate(0, calc(-20vh - ${changeInTransform}px))`,
       }}
     >
       <div className="cardTitle">{props.title}</div>
