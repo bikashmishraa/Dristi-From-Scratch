@@ -5,6 +5,7 @@ import Cards from "./Cards/Cards.jsx";
 import "./App.css";
 import Lenis from "lenis";
 import kecImg from "/kec_peeps.png";
+import Lines from "./Lines/Lines.jsx";
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <>
+      <Lines/>
       <Nav />
       <Countdown />
       <div className="pageContent">
