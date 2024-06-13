@@ -6,7 +6,7 @@ div.NavOpener{
   position: absolute;
   top:10vh;
   left: 50%;
-  z-index: 1;
+  z-index: 3;
   transform: translate(-50%,0);
   border-radius: 50%;
   box-shadow: var(--color3) 0 0 12px 2px;
@@ -14,6 +14,7 @@ div.NavOpener{
   display:flex;
   padding: 3vmin;
   transition: background-color 0.2s ease;
+  transition: padding 0.2s ease;
   cursor: pointer;
 }
 .fixedNavBar{
@@ -23,6 +24,7 @@ div.NavOpener{
 
 div.NavOpener:hover{
   background-color: var(--color1);
+  padding: 4vmin;
 }
 
 div.NavOpener>img{
