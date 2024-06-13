@@ -4,6 +4,7 @@ import Nav from './Nav/Nav.jsx';
 import Cards from './Cards/Cards.jsx';
 import './App.css';
 import Lenis from 'lenis'
+import kecImg from '/kec_peeps.png'
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
     <Countdown />
     <div className="pageContent" >
     <Cards id="circleButtons" title= "KEC IT Club" button1="About Us" button2="Contact Us" />
-    <Cards id="image" src="src/assets/kec_peeps.png" />
+    <Cards id="image" src={kecImg}/>
     <Cards id="one" title= "Our Identity" content="the members on our team are this this and thiss..." />
     <Cards id="two" title= "Our Projects" content="the members on our team are this this and thiss..." />
     </div>

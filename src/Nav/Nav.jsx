@@ -1,4 +1,13 @@
 import "./Nav.css";
+import navImg from "/code.png";
+import close from "/close.png";
+import logo from "/logo.png";
+import member_img from "/member.png";
+import info_img from "/info.png";
+import contact_img from "/contact.png";
+import events_img from "/events.png";
+import notice_img from "/notice.png";
+
 import { useState, useEffect } from 'react'
 import {sin, cos, pi, min} from 'mathjs'
 
@@ -12,11 +21,11 @@ function Nav() {
   let [navStyle, setnavStyle] = useState({});
 
   const li_properties = [
-    {id:1, link: "src/assets/member.png", name: "Members"},
-    {id:2, link: "src/assets/info.png", name: "About"},
-    {id:3, link: "src/assets/contact.png", name: "Contacts"},
-    {id:4, link: "src/assets/notice.png", name: "Notice"},
-    {id:5, link: "src/assets/events.png", name: "Events"},
+    {id:1, link:  member_img , name: "Members"},
+    {id:2, link:  info_img , name: "About"},
+    {id:3, link:  contact_img, name: "Contacts"},
+    {id:4, link:  notice_img , name: "Notice"},
+    {id:5, link:  events_img , name: "Events"},
   ]
     // About, Members, Contact Us, Events, Notices
   const lis = li_properties.map(pr => <li className="navMenu" key={pr.id} 
@@ -58,13 +67,13 @@ function Nav() {
 
   return (
     <>
-    <img src="src/assets/logo.png" className='logo'/>
+    <img src={logo} className='logo'/>
     <div className="NavOpener" onClick={(e)=>{
       setDisplay("PopIn")
     }} 
     style = {navStyle}
     >
-    <img src="src/assets/code.png" alt="Nav" />
+    <img src={navImg} alt="Nav" />
     </div>
     <header className={"topNavContainer "+ navDisplay} >
     <div className="navText">{currOpt}</div>
@@ -76,7 +85,7 @@ function Nav() {
     <span className="disc" onClick={(e)=>{
       setDisplay("hidden")
     }}>
-    <img src="src/assets/close.png" alt="" />
+    <img src={close} alt="" />
     </span>
     </header>
     </>
