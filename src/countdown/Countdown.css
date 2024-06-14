@@ -7,16 +7,20 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-
 }
 .countdownObj{
+    z-index: 1;
     display: flex;
     flex-direction: column;
+    background-color: var(--color3);
 }
 .notcountdown{
+    z-index: 1;
     font-size: 1.3rem;
+    padding-bottom: 1vw;
     font-family: "JetBrains Mono", monospace;
     font-weight: bold;
+    background-color: var(--color3);
     color: var(--color1);
 }
 .dayshour{

@@ -9,7 +9,7 @@ import events_img from "/events.png";
 import notice_img from "/notice.png";
 import { useState, useEffect } from "react";
 
-import { sin, cos, pi, min } from "mathjs";
+import { pi } from "mathjs";
 
 function Nav() {
   // Links

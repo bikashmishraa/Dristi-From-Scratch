@@ -18,14 +18,7 @@ function Lines() {
 
   return (
     <div className="lines">
-      <div className="lineHorizontal">
-        <div
-          className="bulb"
-          style={{
-            translate: `0 ${scrollY}px`,
-          }}
-        ></div>
-      </div>
+      <div className="lineHorizontal"> </div>
       <div className="boxLeft">
         <div className="lineLeft">
           <div

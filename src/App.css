@@ -10,6 +10,7 @@
 }
 
 :root{
+  --color1b: #ddddee;
   --color1: #81BCE4;
   --color1a: #2270A5;
   --color1e: #29B1EA;
@@ -17,6 +18,7 @@
   --color3: #090f11;
   --color4: #0d161b;
   --color4a: #0E1E28;
+  --color4aA: rgba(14, 30, 40, 0.5);
   --color-1: #ffffff;
 }
 
@@ -58,8 +60,10 @@ a{
   height: 110vh;
   padding-left: 10vw;
   padding-right: 10vw;
-  background: url('../bg_grid.png') right bottom no-repeat, url('../bg_grid2.png') left top no-repeat;
-  background-color: var(--color4a);
+  /* background: url('../bg_grid.png') right bottom no-repeat, url('../bg_grid2.png') left top no-repeat; */
+  background-color: var(--color4aA);
+  /* background-color: var(--color4a); */
+  /* backdrop-filter: blur(2px); */
   background-size: 30vw;
   background-repeat: no-repeat;
   margin: 5vw;
