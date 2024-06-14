@@ -6,9 +6,10 @@
     font-size: 6rem;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
 }
 .countdownObj{
+    margin-top: 40vh;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -64,11 +65,11 @@
     font-size: 0.4em;
 }
 .mouseimg{
-    padding-top: 50px;
+    padding-top: 0vh;
     height: auto;
     width: 50px; 
     filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(130deg);
-    z-index: 0;
+    z-index: 1;
     opacity: 0.7;
     animation-name: mouseJump;
     animation-duration: 1s;
@@ -80,7 +81,7 @@
 
 @keyframes mouseJump{
     0% {
-        transform: translate(0px, 80px);
+        transform: translate(0px, 4vw);
     }
     100%{
         transform: translate(0px, 0px);

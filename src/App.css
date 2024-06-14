@@ -16,6 +16,7 @@
   --color1e: #29B1EA;
   --color2: #000000;
   --color3: #090f11;
+  --color3A:  rgba(40,116, 168, 0.2);
   --color4: #0d161b;
   --color4a: #0E1E28;
   --color4aA: rgba(14, 30, 40, 0.5);
@@ -70,6 +71,16 @@ a{
   margin-bottom: 40vh;
 }
 
+.pageContent::before{
+    content: "SCROLL DOWN";
+    color: var(--color1);
+    font-family: "JetBrains Mono", monospace;
+    position: absolute;
+    font-weight: bold;
+    top: 1vh;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
 
 /* LENIS Customization*/
 html.lenis, html.lenis body {
@@ -97,4 +108,22 @@ html.lenis, html.lenis body {
   .pageContent{
     height: 150vh;
   }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.5;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.7;
+    }
 }

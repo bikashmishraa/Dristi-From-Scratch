@@ -13,7 +13,7 @@ function Cards(props) {
     );
   } else if (props.id == "image") {
     return (
-      <div className="glassCards parallaxEl" id={props.id}>
+      <div className="glassCards" id={props.id}>
         <img src={props.src} />
       </div>
     );

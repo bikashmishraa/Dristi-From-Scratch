@@ -4,6 +4,8 @@ li{
 
 div.NavOpener{
   position: absolute;
+  height: 3rem;
+  width: 3rem;
   top:10vh;
   left: 50%;
   z-index: 3;
@@ -12,10 +14,13 @@ div.NavOpener{
   box-shadow: var(--color3) 0 0 12px 2px;
   background-color: var(--color3);
   display:flex;
+  align-items: center;
+  justify-content: center;
   padding: 3vmin;
   transition: padding 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
 }
+
 .fixedNavBar{
   position: fixed;
   top:5vh;
@@ -23,18 +28,42 @@ div.NavOpener{
 
 div.NavOpener:hover{
   background-color: transparent;
-  box-shadow: transparent 0 0 12px 2px;
+  box-shadow: none;
+}
+div.NavOpener>svg{
+  height: inherit;
+  overflow: visible;
 }
 
-div.NavOpener>img{
-  filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(160deg);
-  height: 4rem;
+div.NavOpener>svg>path{
+  transition: 0.1s ease-in;
+  opacity: 0.7;
+}
+
+div.NavOpener::after{
+  content:"";
+  width: 0px;
+  box-shadow: var(--color1) 0 0 5px 0px;
+  aspect-ratio:1;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--color1);
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -30%);
   transition: 0.2s ease;
 }
-
-div.NavOpener:hover>img{
-  height: 4rem;
-  animation: rotateClockwise 8s linear infinite;
+div.NavOpener:hover>svg>:nth-child(1){
+  transform: translate(-1rem, 0.2rem);
+}
+div.NavOpener:hover>svg>:nth-child(2){
+  transform: translate(1rem, 0.2rem );
+}
+div.NavOpener:hover>svg>:nth-child(3){
+  transform: translate(0,-1.2rem);
+}
+div.NavOpener:hover::after{
+  width: 0.8rem;
 }
 
 img.logo{
@@ -42,6 +71,7 @@ img.logo{
   top: 4vh;
   left: 5vw;
   height: 3rem;
+  z-index: 2;
 }
 
 nav.topNav{
@@ -73,6 +103,7 @@ nav.topNav::after{
   pointer-events: none;
   background: transparent;
 }
+
 span.disc{
   width: 20vmin;
   height: 20vmin;
@@ -147,6 +178,10 @@ header.topNavContainer{
   border-radius: 50%;
   height:130vmax;
   background-color: var(--color3);
+  background-image: url("/nav_bg.svg");
+  background-repeat: no-repeat;
+  background-size: 90vw;
+  background-position: center;
   overflow: hidden;
   aspect-ratio:1;
 

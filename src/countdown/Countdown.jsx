@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Countdown.css";
-import mouseIng from "/m1.png";
+import mouseImg from "/m1.png";
 
 function Countdown() {
   // const deadline = new Date('May 15 24 00:00:00');
@@ -60,7 +60,7 @@ function Countdown() {
           left for <br />
           next event
         </div>
-        <img className="mouseimg" src={mouseIng} alt="mouse img" />
+        <img className="mouseimg" src={mouseImg} alt="mouse img" />
       </div>
     </>
   );
