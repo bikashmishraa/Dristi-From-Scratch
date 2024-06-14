@@ -1,6 +1,7 @@
 import Countdown from "./countdown/Countdown.jsx";
 import { useEffect } from "react";
 import Nav from "./Nav/Nav.jsx";
+import Parallax from "./Parallax/Parallax.js";
 import Cards from "./Cards/Cards.jsx";
 import "./App.css";
 import Lenis from "lenis";
@@ -27,7 +28,8 @@ function App() {
 
   return (
     <>
-      <Lines/>
+      <Parallax />
+      <Lines />
       <Nav />
       <Countdown />
       <div className="pageContent">
@@ -38,19 +40,6 @@ function App() {
           button2="Contact Us"
         />
         <Cards id="image" src={kecImg} />
-        <Cards
-          id="one"
-          title="Our Identity"
-          content="the members on our team are this this and thiss..."
-        />
-        <Cards
-          id="two"
-          title="Our Projects"
-          content="the members on our team are this this and thiss..."
-        />
-      </div>
-
-      <div className="pageContent">
         <Cards
           id="one"
           title="Our Identity"

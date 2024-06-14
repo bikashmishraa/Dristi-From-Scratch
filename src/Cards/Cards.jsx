@@ -1,33 +1,9 @@
 import "./Cards.css";
 
-import { useState, useEffect, useRef } from "react";
-
 function Cards(props) {
-  const [changeInTransform, setChangeInTransform] = useState();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setChangeInTransform(window.pageYOffset / 5);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   if (props.id == "circleButtons") {
     return (
-      <div
-        className="glassCards glass"
-        id={props.id}
-        style={{
-          transform: `translate(0, calc(-20vh - ${changeInTransform}px))`,
-        }}
-      >
+      <div className="glassCards glass parallaxEl" id={props.id}>
         <div className="cardTitle">{props.title}</div>
         <div className="cardContent">
           <button className="activated">{props.button1}</button>
@@ -37,25 +13,13 @@ function Cards(props) {
     );
   } else if (props.id == "image") {
     return (
-      <div
-        className="glassCards"
-        id={props.id}
-        style={{
-          transform: `translate(0, calc(-20vh - ${changeInTransform}px))`,
-        }}
-      >
+      <div className="glassCards parallaxEl" id={props.id}>
         <img src={props.src} />
       </div>
     );
   }
   return (
-    <div
-      className="glassCards glass"
-      id={props.id}
-      style={{
-        transform: `translate(0, calc(-20vh - ${changeInTransform}px))`,
-      }}
-    >
+    <div className="glassCards glass parallaxEl" id={props.id}>
       <div className="cardTitle">{props.title}</div>
       <div className="cardContent">{props.content}</div>
     </div>
