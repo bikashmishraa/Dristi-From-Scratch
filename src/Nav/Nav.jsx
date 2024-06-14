@@ -65,8 +65,8 @@ function Nav() {
   window.onscroll = () => {
     if (document.documentElement.scrollTop > 90) {
       setnavStyle({
-        position: "fixed",
         top: "10px",
+        position: "fixed",
       });
     } else {
       setnavStyle({});
@@ -75,7 +75,9 @@ function Nav() {
 
   return (
     <>
-      <img src={logo} className="logo" />
+      <a href="/Dristi-From-Scratch/">
+        <img src={logo} className="logo" />
+      </a>
       <div
         className="NavOpener"
         onClick={(e) => {

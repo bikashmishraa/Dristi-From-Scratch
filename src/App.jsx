@@ -1,6 +1,7 @@
-import Countdown from "./countdown/Countdown.jsx";
 import { useEffect } from "react";
+import Countdown from "./countdown/Countdown.jsx";
 import Nav from "./Nav/Nav.jsx";
+import Footer from "./Footer/Footer.jsx";
 import Parallax from "./Parallax/Parallax.js";
 import Cards from "./Cards/Cards.jsx";
 import "./App.css";
@@ -51,6 +52,7 @@ function App() {
           content="the members on our team are this this and thiss..."
         />
       </div>
+      <Footer />
     </>
   );
 }

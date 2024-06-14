@@ -2,6 +2,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: 0;
     display: flex;
     justify-content: space-around;
     --width: 5px;
@@ -27,8 +28,7 @@
     /* box-shadow: 0px 0px 15px rgba(32,108, 160, 0.1); */
 }
 
-.lineRight::before{
-    content: "";
+.lineRight> .bulb{
     width: var(--width);
     height: var(--height);
     position: absolute;
@@ -39,8 +39,7 @@
     transform: translate(-50%, 400%);
     animation: flicker 1s 0.5s infinite;
 }
-.lineCenter::before{
-    content: "";
+.lineCenter> .bulb{
     width: var(--width);
     height: var(--height);
     position: absolute;
@@ -52,8 +51,7 @@
     transform: translate(-50%, 0);
     animation: flicker 1s .25s infinite;
 }
-.lineLeft::before{
-    content: "";
+.lineLeft> .bulb{
     width: var(--width);
     height: var(--height);
     position: absolute;
