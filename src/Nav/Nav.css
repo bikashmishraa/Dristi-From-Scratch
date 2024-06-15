@@ -37,7 +37,6 @@ div.NavOpener>svg{
 
 div.NavOpener>svg>path{
   transition: 0.1s ease-in;
-  opacity: 0.7;
 }
 
 div.NavOpener::after{
@@ -82,7 +81,7 @@ nav.topNav{
   transform: translate(-50%, -50%);
   aspect-ratio: 1;
   clip-path: circle(50%);
-  background: var(--color4);
+  background: var(--color4a);
   color: var(--color-1);
   padding: 1em;
   margin: 5px;
@@ -118,7 +117,6 @@ span.disc{
   background-color: var(--color3);
   display:flex;
   padding: 7vmin;
-  cursor: pointer;
 }
 span.disc:hover{
   box-shadow: var(--color3) 0 0 12px 5px;
@@ -127,7 +125,60 @@ span.disc:hover>img{
   filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(160deg);
 }
 
+span.navDestroyer69{
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  cursor: pointer;
+  z-index: 9;
+  aspect-ratio: 1;
+  padding:0;
+}
 
+span.navDestroyer69::after{
+  content:"";
+  width: 0px;
+  box-shadow: var(--color1) 0 0 5px 0px;
+  aspect-ratio:1;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--color1);
+  left:50%;
+  top:50%;
+  transform: translate(-52%, -60%);
+  transition: 0.2s ease;
+}
+
+span.navDestroyer69:hover::after{
+  width: 0.8rem;
+}
+
+span.navDestroyer69>svg{
+  scale: 3;
+}
+
+
+span.navDestroyer69>svg>path{
+  transition: 0.1s ease-in;
+}
+
+span.navDestroyer69:hover>svg>path:nth-child(1){
+  transform: translate(-0.5rem, 0.5rem);
+}
+span.navDestroyer69:hover>svg>path:nth-child(2){
+  transform: translate(0.5rem, -0.5rem );
+}
+span.navDestroyer69:hover>svg>path:nth-child(3){
+  transform: translate(0.5rem,0.5rem);
+}
+span.navDestroyer69:hover>svg>path:nth-child(4){
+  transform: translate(-0.5rem,-0.5rem);
+}
+
+span.navDestroyer69>svg{
+  height: 2rem;
+}
 span.disc>img{
   filter: sepia(100%) saturate(300%) brightness(40%) hue-rotate(160deg);
 }
@@ -168,23 +219,19 @@ nav.topNav li:hover>img{
   height: 80px;
   opacity: 1;
   filter:  sepia(100%) saturate(300%) brightness(100%) hue-rotate(150deg);
-  }
+}
 
 
 header.topNavContainer{
   position: fixed;
   z-index:4;
   font-family: "Monomaniac One", sans-serif;
-  border-radius: 50%;
-  height:130vmax;
+  height:100vh;
+  width:80vw;
   background-color: var(--color3);
-  background-image: url("/nav_bg.svg");
-  background-repeat: no-repeat;
-  background-size: 90vw;
-  background-position: center;
+  border-radius: 3vh;
+  box-shadow: 0px 0px 42px 0px var(--color4aA);
   overflow: hidden;
-  aspect-ratio:1;
-
   top:50%;
   transform: translate(-50%,-50%);
   left:50%;
@@ -219,24 +266,25 @@ header.topNavContainer div.navText:hover{
 .PopIn{
   animation-name: swoopIn;
   animation-duration: 1.5s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in;
+  transform-origin: 50% 0;
   pointer-events: auto;
 }
 
 @keyframes swoopIn{
   0%{
-    clip-path: circle(0vmax);
+  transform: translate(-50%, -180%) ;
   }
   100%{
-    clip-path: circle(110vmax);
+    transform: translate(-50%, -50%) ;
   }
 }
 @keyframes swoopOut{
   0%{
-    clip-path: circle(110vmax);
+    transform: translate(-50%, -50%) ;
   }
   100%{
-    clip-path: circle(0vmax);
+  transform: translate(-50%, -200%) ;
   }
 }
 

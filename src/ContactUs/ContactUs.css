@@ -1,0 +1,118 @@
+.contactUs {
+  position: relative;
+  border-radius: 20vw;
+  height: 70vh;
+  padding: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background-color: var(--color4aA);
+  background-size: 30vw;
+  background-repeat: no-repeat;
+  margin: 5vw;
+}
+
+.contactUsTitle {
+  color: var(--color1);
+  font-family: "Monomaniac One", cursive;
+  font-size: 3rem;
+}
+.contactUsContent{
+  padding: 2rem;
+}
+.contactUsContent form{
+  margin: 2rem;
+  height: fit-content;
+  text-align:left;
+}
+.contactUsContent img{
+  position: absolute;
+  height: 90%;
+  top: 5%;
+  right: 0;
+}
+
+.contactUsContent form label{
+  font-family: "Quicksand";
+  font-weight: bold;
+  position: absolute;
+  color: var(--color1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  transform: translate(0%, -50%);
+  z-index: 1;
+  margin: 2rem;
+  font-size: 0.8rem;
+  display: block;
+  transition: all .2s;
+}
+
+.contactUsContent>form>div{
+  position: relative;
+}
+.contactUsContent>form input, .contactUsContent>form textarea{
+  backdrop-filter: blur(5px);
+  font-size: 1rem;
+  outline: none;
+  display: block;
+  width: 30vw;
+  padding: 2rem;
+  border-radius: 3vh;
+  /* background-color: var(--color3A); */
+  background: linear-gradient(to right, var(--color3A), var(--color4aA));
+  border: 1px solid var(--color3A);
+  color: var(--color1);
+  font-family: "Quicksand";
+  font-weight: bold;
+  margin: 2px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-text-fill-color: var(--color1);
+    transition: background-color 5000s ease-in-out 0s;
+    background-color: var(--color3A);
+}
+
+/* :NOTE: The order of the following rules is important. */
+
+/* When nothing is typed in the input, the label is shown. */
+.contactUsContent input:placeholder-shown + label{
+  top: 0.8rem;
+}
+.contactUsContent textarea:placeholder-shown + label{
+  top: 1.5rem;
+}
+/* When the input is focused, the label is moved up. */
+.contactUsContent input:focus + label {
+  top: -1.5rem;
+  background-color: var(--color1a);
+}
+.contactUsContent textarea:focus + label{
+  top: -1.5rem;
+  background-color: var(--color1a);
+}
+
+/* When something is typed in the input, the label is moved up. */
+.contactUsContent input:not(placeholder-shown) + label{
+  top: -1.5rem;
+  background-color: var(--color4a);
+}
+.contactUsContent textarea:not(placeholder-shown) + label{
+  top: -1.5rem;
+  background-color: var(--color4a);
+}
+/* :NOTE: The order of the above rules is important. */
+
+.contactUsContent button[type="submit"]{
+  margin-top: 2rem;
+  color: var(--color3);
+  background-color: var(--color1);
+  transition: 0.2s;
+}
+.contactUsContent button[type="submit"]:hover{
+  margin-top: 2rem;
+  color: var(--color3a);
+  background-color: var(--color1a);
+}

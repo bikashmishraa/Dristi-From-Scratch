@@ -5,8 +5,15 @@ function Lines() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    // Get the height of the document after its loaded
+    const height = document.documentElement.getBoundingClientRect().height;
+    const innerHeight = window.innerHeight;
+
     const bulbsMotion = () => {
-      setScrollY(window.pageYOffset * 1.5);
+      setScrollY(
+        window.pageYOffset +
+          (window.pageYOffset / (height - innerHeight + 300)) * innerHeight,
+      );
     };
     bulbsMotion();
     window.addEventListener("scroll", bulbsMotion);

@@ -1,0 +1,62 @@
+.aboutUs{
+  position: relative;
+  border-radius: 20vw;
+  padding: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background-color: var(--color4aA);
+  background-size: 30vw;
+  background-repeat: no-repeat;
+  margin: 5vw;
+  height: fit-content;
+}
+
+.aboutUsTitle {
+  color: var(--color1);
+  font-family: "Monomaniac One", cursive;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.aboutUsContent{
+  padding: 2rem;
+  display: flex;
+}
+.aboutUsContent p{
+  font-family: "Quicksand";
+  font-weight: bold;
+  position: relative;
+  color: var(--color1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-align: left;
+  transform: translate(0%, -50%);
+  z-index: 1;
+  margin: 2rem;
+  font-size: 0.8rem;
+  display: block;
+  transition: all .2s;
+}
+
+.aboutUsContent>p{
+  position: relative;
+}
+
+.tablet{
+  font-weight: 800;
+  margin: 1rem;
+  border-radius: 2.5rem;
+  position: relative;
+  padding: 0.5rem;
+  background-color: var(--color4aA);
+}
+.tablet img{
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color4);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 20%;
+
+}

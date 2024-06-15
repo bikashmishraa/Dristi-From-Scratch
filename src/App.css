@@ -21,6 +21,7 @@
   --color4a: #0E1E28;
   --color4aA: rgba(14, 30, 40, 0.5);
   --color-1: #ffffff;
+  --color-off: #C6606C;
 }
 
 
@@ -50,37 +51,46 @@ a{
 }
 
 .glass{
-  background: radial-gradient( rgba(34, 112, 165, 0.46) 0%, rgba(34, 112, 165, 0.1) 100%) ;
+  /* background: radial-gradient( rgba(34, 112, 165, 0.46) 0%, rgba(34, 112, 165, 0.1) 100%) ; */
+  background: radial-gradient(var(--color3A) 10%, var(--color4aA) 80%);
   /* box-shadow: rgba(9, 15, 17,0.45) 0 4px 20px 0, inset rgba(9,15,17,0.45) 0 4px 50px 0; */
-  backdrop-filter: blur(25px);
-  border: 1px solid #236490;
-}
-.pageContent{
-  position: relative;
-  border-radius: 20vw;
-  height: 110vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  /* background: url('../bg_grid.png') right bottom no-repeat, url('../bg_grid2.png') left top no-repeat; */
-  background-color: var(--color4aA);
-  /* background-color: var(--color4a); */
-  /* backdrop-filter: blur(2px); */
-  background-size: 30vw;
-  background-repeat: no-repeat;
-  margin: 5vw;
-  margin-bottom: 40vh;
+  backdrop-filter: blur(15px);
+  /* border: 1px solid #236490; */
+  border: 1px solid var(--color3A);
 }
 
-.pageContent::before{
-    content: "SCROLL DOWN";
-    color: var(--color1);
-    font-family: "JetBrains Mono", monospace;
-    position: absolute;
-    font-weight: bold;
-    top: 1vh;
-    left: 50%;
-    transform: translate(-50%, 50%);
+button{
+  border:none;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 2px;
+  width: 10rem;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+button.activated{
+  background-color: var(--color1a);
+  color: var(--color1);
+  border: 3px solid var(--color1a);
+  transition: 0.2s;
+}
+button.deactivated{
+  border: 3px solid var(--color1a);
+  background-color:transparent;
+  color: var(--color1);
+  transition: 0.2s;
+}
+button.deactivated:hover{
+  width: 11rem;
+}
+
+button.activated:hover{
+  width: 11rem;
   }
+
+
+
 
 /* LENIS Customization*/
 html.lenis, html.lenis body {
