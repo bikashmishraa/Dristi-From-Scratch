@@ -4,8 +4,8 @@ import Cards from "../Cards/Cards.jsx";
 
 export default function AboutUs() {
   return (
-    <div className="aboutUs">
-      <img src={aboutUsImg} alt="" />
+    <div className="aboutUs" id="aboutUs">
+      <img className="parallaxEl" src={aboutUsImg} alt="" data-lerp="-15" />
       <div className="aboutUsContent">
         <div className="aboutUsText">
           <div className="aboutUsTitle">About Us</div>

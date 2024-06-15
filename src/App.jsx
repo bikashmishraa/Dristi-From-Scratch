@@ -7,30 +7,14 @@ import Footer from "./Footer/Footer.jsx";
 import Parallax from "./Parallax/Parallax.js";
 import Cards from "./Cards/Cards.jsx";
 import "./App.css";
-import Lenis from "lenis";
 import kecImg from "/kec_peeps.png";
 import Lines from "./Lines/Lines.jsx";
+import LenisComponent from "./Lenis/Lenis.js";
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      lerp: 0.1,
-      wheelMultiplier: 0.7,
-      gestureOrientation: "vertical",
-      normalizeWheel: false,
-      smoothTouch: false,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
     <>
+      <LenisComponent />
       <Parallax />
       <Lines />
       <Nav />
@@ -40,7 +24,9 @@ function App() {
           id="circleButtons"
           title="KEC IT Club"
           button1="About Us"
+          link1="#aboutUs"
           button2="Contact Us"
+          link2="#contactUs"
         />
         <Cards id="image" src={kecImg} />
         <Cards

@@ -7,8 +7,12 @@ function Cards(props) {
       <div className="glassCards glass parallaxEl" id={props.id}>
         <div className="cardTitle">{props.title}</div>
         <div className="cardContent">
-          <button className="activated">{props.button1}</button>
-          <button className="deactivated">{props.button2}</button>
+          <a href={props.link1}>
+            <button className="activated">{props.button1}</button>
+          </a>
+          <a href={props.link2}>
+            <button className="deactivated">{props.button2}</button>
+          </a>
         </div>
       </div>
     );

@@ -20,17 +20,17 @@
 .aboutUsContent{
   padding: 2rem;
   display: flex;
+  z-index: 1;
+  position: relative;
 }
 .aboutUsContent p{
   font-family: "Quicksand";
   font-weight: bold;
-  position: relative;
   color: var(--color1);
   border-radius: 0.5rem;
   padding: 0.5rem;
   text-align: left;
   transform: translate(0%, -50%);
-  z-index: 1;
   margin: 2rem;
   font-size: 0.8rem;
   display: block;

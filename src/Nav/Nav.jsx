@@ -1,65 +1,15 @@
 import "./Nav.css";
-import navImg from "/nav_bg.svg";
 import logo from "/logo.png";
-import member_img from "/member.png";
-import info_img from "/info.png";
-import contact_img from "/contact.png";
-import events_img from "/events.png";
-import notice_img from "/notice.png";
+import aboutImg from "/info.png";
+import contactImg from "/contact.png";
+import eventsImg from "/events.png";
 import { useState, useEffect } from "react";
-
-import { pi } from "mathjs";
 
 function Nav() {
   // Links
   // Hard defined vars
-  let c_radDif = (2 * pi) / 5;
-  let c_angDif = 360 / 5;
-  let [currOpt, setOpt] = useState("");
-  let [navDisplay, setDisplay] = useState("hidden");
   let [navStyle, setnavStyle] = useState({});
-
-  const li_properties = [
-    { id: 1, link: member_img, name: "Members" },
-    { id: 2, link: info_img, name: "About" },
-    { id: 3, link: contact_img, name: "Contacts" },
-    { id: 4, link: notice_img, name: "Notice" },
-    { id: 5, link: events_img, name: "Events" },
-  ];
-  // About, Members, Contact Us, Events, Notices
-  const lis = li_properties.map((pr) => (
-    <li
-      className="navMenu"
-      key={pr.id}
-      onMouseOver={(e) => {
-        if (pr.id == 1) {
-          e.target.parentElement.lastChild.style.zIndex = "1";
-          e.target.parentElement.firstChild.style.zIndex = "2";
-        } else if (pr.id == 5) {
-          e.target.parentElement.lastChild.style.zIndex = "2";
-          e.target.parentElement.firstChild.style.zIndex = "3";
-        } else {
-          e.target.parentElement.lastChild.style.zIndex = "2";
-          e.target.parentElement.firstChild.style.zIndex = "2";
-        }
-        setOpt(pr.name);
-      }}
-      onMouseOut={(e) => {
-        e.target.className = "";
-        setOpt("");
-      }}
-      style={{
-        transform: `rotate(${c_angDif * pr.id}deg) translate(-50%,-50%) skew(${c_angDif * 2}deg)`,
-      }}
-    >
-      <img
-        src={pr.link}
-        style={{
-          transform: `skew(-${c_angDif * 2}deg) rotate(${-c_angDif * pr.id}deg)`,
-        }}
-      />
-    </li>
-  ));
+  let [navDisplay, setDisplay] = useState("hidden");
 
   window.onscroll = () => {
     if (document.documentElement.scrollTop > 90) {
@@ -80,9 +30,7 @@ function Nav() {
       </a>
       <div
         className="NavOpener"
-        onClick={(e) => {
-          setDisplay("PopIn");
-        }}
+        onClick={(e) => setDisplay("popIn")}
         style={navStyle}
       >
         <svg viewBox="0 0 75 71" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,42 +48,77 @@ function Nav() {
           />
         </svg>
       </div>
-      <header className={"topNavContainer " + navDisplay}>
-        <div className="navText">{currOpt}</div>
 
-        <nav className="topNav">{lis}</nav>
+      <div
+        className={"navContainerContainer " + navDisplay}
+        onMouseMove={(e) => {
+          var wind_e = window.event;
+          var width = document.documentElement.clientWidth;
+          var height = document.documentElement.clientHeight;
 
-        <span
-          className="navDestroyer69"
-          onClick={(e) => {
-            setDisplay("hidden");
-          }}
-        >
-          <svg
-            viewBox="0 0 81 82"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.7676 63.5947C20.1605 66.0984 15.7383 61.8033 18.1356 58.1247L27.136 44.3142C28.5105 42.2051 31.4682 41.8749 33.2741 43.6288L37.8158 48.0399C39.6217 49.7938 39.3778 52.7599 37.3097 54.1953L23.7676 63.5947Z"
-              fill="#80BBE4"
-            />
-            <path
-              d="M56.9003 18.352C60.503 15.8509 64.9236 20.1337 62.5378 23.8138L52.9947 38.5338C51.6242 40.6477 48.6644 40.9837 46.855 39.2307L41.9876 34.515C40.1782 32.7621 40.4203 29.7931 42.4898 28.3564L56.9003 18.352Z"
-              fill="#80BBE4"
-            />
-            <path
-              d="M62.345 57.673C64.8002 61.3133 60.4464 65.6776 56.8002 63.2312L43.1112 54.0469C41.0208 52.6444 40.7301 49.6825 42.508 47.9003L46.9795 43.418C48.7574 41.6357 51.72 41.9192 53.1276 44.0063L62.345 57.673Z"
-              fill="#80BBE4"
-            />
-            <path
-              d="M18.3966 25.0335C15.9539 21.3849 20.3226 17.0354 23.9605 19.4942L37.6179 28.7253C39.7036 30.135 39.9841 33.0978 38.2001 34.8739L33.7134 39.341C31.9294 41.1171 28.9678 40.8235 27.5673 38.7316L18.3966 25.0335Z"
-              fill="#80BBE4"
-            />
-          </svg>
-        </span>
-        <span className="disc"></span>
-      </header>
+          var posY = wind_e.clientY;
+          var posX = wind_e.clientX;
+
+          if (wind_e.clientY > height * 0.65) {
+            // For Events
+            e.target.onmousedown = (e) => {
+              location.href = "#events";
+              setDisplay("hidden");
+            };
+            e.target.children[0].children[2].classList.add("navItemHover");
+            e.target.children[0].children[1].classList.remove("navItemHover");
+            e.target.children[0].children[0].classList.remove("navItemHover");
+          } else if (wind_e.clientY < height * 0.35) {
+            // For About
+            e.target.onmousedown = (e) => {
+              location.href = "#aboutUs";
+              setDisplay("hidden");
+            };
+            e.target.children[0].children[0].classList.add("navItemHover");
+            e.target.children[0].children[1].classList.remove("navItemHover");
+            e.target.children[0].children[2].classList.remove("navItemHover");
+          } else {
+            // For Contact
+            e.target.onmousedown = (e) => {
+              // lenis.scrollTo("#contactUs");
+              location.href = "#contactUs";
+              setDisplay("hidden");
+            };
+            e.target.children[0].children[1].classList.add("navItemHover");
+            e.target.children[0].children[0].classList.remove("navItemHover");
+            e.target.children[0].children[2].classList.remove("navItemHover");
+          }
+
+          var newCenter = [width / 2, height * 0.5];
+
+          var diffFromCenter = [posX - newCenter[0], posY - newCenter[1]];
+          e.target.children[0].children[0].style.transform = `rotateX(calc(${(diffFromCenter[1] / (0.75 * height)) * 90}deg + 45deg)) translate(-50%, -50%)`;
+          e.target.children[0].children[1].style.transform = `rotateX(calc(${(diffFromCenter[1] / (0.75 * height)) * 90}deg + 0deg)) translate(-50%, -50%)`;
+          e.target.children[0].children[2].style.transform = `rotateX(calc(${(diffFromCenter[1] / (0.75 * height)) * 90}deg + -45deg)) translate(-50%, -50%)`;
+          e.target.children[0].style.top = `calc(-50% - ${diffFromCenter[1] * 0.75}px))`;
+        }}
+      >
+        <nav className="NavContainer">
+          <div className="NavItems" id="about_nav">
+            About Us
+            <span className="NavItemIcons">
+              <img src={aboutImg} alt="" />
+            </span>
+          </div>
+          <div className="NavItems" id="contact_nav">
+            Contact Us
+            <span className="NavItemIcons">
+              <img src={contactImg} alt="" />
+            </span>
+          </div>
+          <div className="NavItems" id="events_nav">
+            Events
+            <span className="NavItemIcons">
+              <img src={eventsImg} alt="" />
+            </span>
+          </div>
+        </nav>
+      </div>
     </>
   );
 }

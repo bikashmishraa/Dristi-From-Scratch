@@ -2,7 +2,7 @@ import "./ContactUs.css";
 import contactUsGraphics from "/contactUs_graphics.png";
 export default function ContactUs() {
   return (
-    <div className="contactUs">
+    <div className="contactUs" id="contactUs">
       <div className="contactUsTitle">Contact Us</div>
       <div className="contactUsContent">
         <form action="submit">
