@@ -10,9 +10,13 @@ export default function AboutUs() {
         <div className="aboutUsText">
           <div className="aboutUsTitle">About Us</div>
           <p>
-          At Kathmandu Engineering College (KEC), the KEC IT Club is a vibrant group of tech enthusiasts committed to promoting an innovative and high-achieving culture in the field of information technology. Students may explore, learn, and succeed in a variety of technology disciplines through our club.
+            At Kathmandu Engineering College (KEC), the KEC IT Club is a vibrant
+            group of tech enthusiasts committed to promoting an innovative and
+            high-achieving culture in the field of information technology.
+            Students may explore, learn, and succeed in a variety of technology
+            disciplines through our club.
           </p>
-           <p>
+          <p>
             We are committed to providing a supportive and inclusive environment
             for all members of our community. We believe that everyone should
             feel valued and respected, regardless of their background or
@@ -42,7 +46,11 @@ export default function AboutUs() {
             opportunities for learning and growth.
           </p>
           <p>
-            Our goal is to create a creative, cooperative atmosphere where students may improve their technical abilities, obtain real-world experience, and be ready for lucrative professions in the engineering sector. With various programmes and events, we aim to close the gap between industrial demands and academic learning.
+            Our goal is to create a creative, cooperative atmosphere where
+            students may improve their technical abilities, obtain real-world
+            experience, and be ready for lucrative professions in the
+            engineering sector. With various programmes and events, we aim to
+            close the gap between industrial demands and academic learning.
           </p>
           <p>
           For more information and to stay updated on our activities, follow us on our social media channels and visit our website.
@@ -62,8 +70,8 @@ Follow us on Facebook, Twitter, and Instagram.
           vicePresident="Sujan Sapkota"
           jointSecretary="Aryan Manandhar"
           Developer="Ankit Shrestha"
-          Designer1="Shreyas Acharya"
-          Designer2="Sneha Karki"
+          designer1="Shreyas Acharya"
+          designer2="Sneha Karki"
           executiveMember1="Pranav Ram Joshi"
           executiveMember2="Adarsha Acharya"
           executiveMember3="Ashika Ghimire"
@@ -71,25 +79,8 @@ Follow us on Facebook, Twitter, and Instagram.
           executiveMember5="Ayush Malla"
           executiveMember6="Jyoti Kumari Gupta"
           executiveMember7="Aayush Lamsal"
-
         />
       </div>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

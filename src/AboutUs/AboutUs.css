@@ -14,6 +14,7 @@
 .aboutUsTitle {
   color: var(--color1);
   font-family: "Monomaniac One", cursive;
+  text-align: center;
   font-size: 3rem;
   margin-bottom: 3rem;
 }
@@ -21,6 +22,7 @@
   padding: 2rem;
   display: flex;
   z-index: 1;
+  width: 80vw;
   position: relative;
 }
 .aboutUsContent p{
@@ -37,6 +39,10 @@
   transition: all .2s;
 }
 
+.aboutUsText {
+  width: 40vw;
+}
+
 .aboutUsContent>p{
   position: relative;
 }
@@ -44,6 +50,7 @@
 .tablet{
   font-weight: 800;
   margin: 1rem;
+  width: 100%;
   border-radius: 2.5rem;
   position: relative;
   padding: 0.5rem;
@@ -57,26 +64,43 @@
   background-color: var(--color4);
   border-radius: 50%;
   aspect-ratio: 1;
-  width: 20%;
+  width: 2vw;
 }
 
 div.aboutUsContent div.glassCards#MembersCard{
+  position: absolute;
+  top: -20vh;
+  right: 10vw;
+}
+div.aboutUsContent div.glassCards#MembersCard> div.membersList{
   transition: all .2s;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
-div.aboutUsContent div.glassCards#MembersCard.shorter{
-  width: 30rem;
-  height: 80vh;
+
+div.aboutUsContent div.glassCards#MembersCard > div.membersList.shorter{
+  height: 60vh;
+  animation: slideUp .5s ease-in-out forwards;
 }
-div.aboutUsContent div.glassCards#MembersCard.larger{
-  animation: slideIn .5s ease-in-out forwards;
+div.aboutUsContent div.glassCards#MembersCard > div.membersList.larger{
+  animation: slideDown .5s ease-in-out forwards;
   height: fit-content;
 }
 
-@keyframes slideIn {
+@keyframes slideUp {
   0%{
-  height: 80vh;
+   height: 130vh;
   }
   100% {
-    height: fit-content;
+    height: 60vh;
+  }
+}
+@keyframes slideDown{
+  0%{
+   height: 60vh;
+  }
+  100% {
+    height: 130vh;
   }
 }
