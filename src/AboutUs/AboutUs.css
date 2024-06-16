@@ -65,16 +65,17 @@ div.aboutUsContent div.glassCards#MembersCard{
 }
 div.aboutUsContent div.glassCards#MembersCard.shorter{
   width: 30rem;
+  height: 80vh;
 }
 div.aboutUsContent div.glassCards#MembersCard.larger{
-  position: fixed;
-  top: 0;
   animation: slideIn .5s ease-in-out forwards;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  height: fit-content;
 }
 
 @keyframes slideIn {
+  0%{
+  height: 80vh;
+  }
   100% {
     height: fit-content;
   }
