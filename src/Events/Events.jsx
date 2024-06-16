@@ -2,7 +2,7 @@ import eventGraphic from "/events_bg.png";
 import Cards from "../Cards/Cards";
 import Parallax from "../Parallax/Parallax";
 import Lines from "../Lines/Lines.jsx";
-import LenisComponent from "../Lenis/Lenis.js";
+import { LenisComponent, lenis } from "../Lenis/Lenis.js";
 import "./Events.css";
 function Events() {
   return (
@@ -53,4 +53,5 @@ function Events() {
     </>
   );
 }
-      export default Events;
+export default Events;
+

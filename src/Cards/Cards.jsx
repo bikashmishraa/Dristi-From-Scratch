@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 function Cards(props) {
   const [MembersOpen, setMembersOpen] = useState("shorter");
+  const [MembersCardState, setMembersCardState] = useState("Show More");
   if (props.id == "circleButtons") {
     return (
       <div className="glassCards glass parallaxEl" id={props.id}>
@@ -112,8 +113,9 @@ function Cards(props) {
         </div>
 
         <div
-          className="tablet"
+          className="tablet showMore"
           onClick={() => {
+            setMembersCardState("Show Less");
             if (MembersOpen == "shorter") {
               setMembersOpen("larger");
             } else {
@@ -121,7 +123,7 @@ function Cards(props) {
             }
           }}
         >
-          Show More
+          {MembersCardState}
         </div>
       </div>
     );
@@ -131,7 +133,7 @@ function Cards(props) {
         <div className="cardTitle">{props.title}</div>
         <div className="tablet" id="event_tablet">
           {props.description}
-          <div className="morelink">more</div>
+          <div className="showMore">more</div>
         </div>
       </div>
     );

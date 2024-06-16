@@ -114,6 +114,16 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+.showMore{
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+.showMore:hover{
+  opacity: 1;
+}
+
+
 @media (max-width: 1000px){
 
   .pageContent{

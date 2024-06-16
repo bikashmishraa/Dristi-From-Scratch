@@ -9,7 +9,7 @@ import Cards from "./Cards/Cards.jsx";
 import "./App.css";
 import kecImg from "/kec_peeps.png";
 import Lines from "./Lines/Lines.jsx";
-import LenisComponent from "./Lenis/Lenis.js";
+import { LenisComponent } from "./Lenis/Lenis.js";
 
 function App() {
   return (
