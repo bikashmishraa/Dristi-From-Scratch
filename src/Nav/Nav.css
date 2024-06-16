@@ -145,10 +145,24 @@ nav.NavContainer div.NavItems:nth-child(3){
 }
 
 .hidden{
-  animation: fadeOut .5s ease-in-out forwards;
+  animation: fadeOut 0.5s ease-in-out forwards;
 }
 .popIn{
-  animation: fadeIn 1.5s ease-in-out forwards;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+
+#navDestroyer69{
+  position: fixed;
+  top: 10vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  transition: 0.2s ease;
+  opacity: 0.5;
+}
+#navDestroyer69:hover{
+  opacity: 1;
 }
 
 @keyframes fadeOut {

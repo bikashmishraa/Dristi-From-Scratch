@@ -1,0 +1,25 @@
+.events{
+    position: relative;
+    border-radius: 20vw;
+    padding: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: var(--color4aA);
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    margin: 5vw;
+    height: fit-content;
+  }
+  .eventTitle {
+    color: var(--color1);
+    font-family: "Monomaniac One", cursive;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  .Eventlists{
+    display: flex;
+  }
+  .emptyspace{
+    width: 40%;
+    
+  }
