@@ -26,94 +26,99 @@ function Cards(props) {
     );
   } else if (props.id == "MembersCard") {
     return (
-      <div
-        className={"glassCards glass parallaxEl " + MembersOpen}
-        id={props.id}
-      >
+      <div className={"glassCards glass parallaxEl"} id={props.id}>
         <div className="cardTitle">{props.title}</div>
-        <div className="tablet" id="president_tablet">
-          <img src={dummyImage} alt="" />
-          {props.president}
-          <div className="post">President</div>
+        <div className={"membersList " + MembersOpen}>
+          <div className="tablet" id="president_tablet">
+            <img src={dummyImage} alt="" />
+            {props.president}
+            <div className="post">President</div>
+          </div>
+          <div className="tablet" id="vicePresident_tablet">
+            <img src={dummyImage} alt="" />
+            {props.vicePresident}
+            <div className="post">Vice President</div>
+          </div>
+          <div className="tablet" id="secretary_tablet">
+            <img src={dummyImage} alt="" />
+            {props.secretary}
+            <div className="post">Secretary</div>
+          </div>
+          <div className="tablet" id="member1_tablet">
+            <img src={dummyImage} alt="" />
+            {props.leadDesigner}
+            <div className="post">Lead Designer</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.eventCoordinator}
+            <div className="post">Event Coordinator</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.jointSecretary}
+            <div className="post">Joint-Secretary</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.Developer}
+            <div className="post">Developer</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.designer1}
+            <div className="post">Designer</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.designer2}
+            <div className="post">Designer</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.executiveMember1}
+            <div className="post">Executive Member</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.executiveMember2}
+            <div className="post">Executive Member</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.executiveMember3}
+            <div className="post">Executive Member</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.executiveMember4}
+            <div className="post">Executive Member</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.executiveMember5}
+            <div className="post">Executive Member</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.executiveMember6}
+            <div className="post">Executive Member</div>
+          </div>
+          <div className="tablet" id="member2_tablet">
+            <img src={dummyImage} alt="" />
+            {props.executiveMember7}
+            <div className="post">Executive Member</div>
+          </div>
         </div>
-        <div className="tablet" id="vicePresident_tablet">
-          <img src={dummyImage} alt="" />
-          {props.vicePresident}
-          <div className="post">Vice President</div>
-        </div>
-        <div className="tablet" id="secretary_tablet">
-          <img src={dummyImage} alt="" />
-          {props.secretary}
-          <div className="post">Secretary</div>
-        </div>
-        <div className="tablet" id="member1_tablet">
-          <img src={dummyImage} alt="" />
-          {props.leadDesigner}
-          <div className="post">Lead Designer</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.eventCoordinator}
-          <div className="post">Event Coordinator</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.jointSecretary}
-          <div className="post">Joint-Secretary</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.Developer}
-          <div className="post">Developer</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.designer1}
-          <div className="post">Designer</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.designer2}
-          <div className="post">Designer</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.executiveMember1}
-          <div className="post">Executive Member</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.executiveMember2}
-          <div className="post">Executive Member</div>
-        </div><div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.executiveMember3}
-          <div className="post">Executive Member</div>
-        </div><div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.executiveMember4}
-          <div className="post">Executive Member</div>
-        </div><div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.executiveMember5}
-          <div className="post">Executive Member</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.executiveMember6}
-          <div className="post">Executive Member</div>
-        </div>
-        <div className="tablet" id="member2_tablet">
-          <img src={dummyImage} alt="" />
-          {props.executiveMember7}
-          <div className="post">Executive Member</div>
-        </div>
-
 
         <div
           className="tablet"
           onClick={() => {
-            setMembersOpen("larger");
+            if (MembersOpen == "shorter") {
+              setMembersOpen("larger");
+            } else {
+              setMembersOpen("shorter");
+            }
           }}
         >
           Show More

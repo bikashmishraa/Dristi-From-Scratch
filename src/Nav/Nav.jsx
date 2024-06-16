@@ -66,7 +66,7 @@ function Nav() {
           ) {
             // For Events
             e.target.onmousedown = (e) => {
-              location.href = "#events";
+              location.href = "events";
               setDisplay("hidden");
             };
             e.target.children[1].children[2].classList.add("navItemHover");
