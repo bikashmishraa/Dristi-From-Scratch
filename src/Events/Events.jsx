@@ -19,8 +19,8 @@ function Events() {
           <div className="Eventlists">
             <Cards
               id="Eventscard"
-              title="Hackathon 1950"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere delectus esse ab magni."
+              title="Workshops ans Seminars"
+              description="We organize regular workshops and seminars on cutting-edge technologies such as Artificial Intelligence, Machine Learning, Cybersecurity, Web Development, and more. These sessions are led by industry experts and distinguished alumni, providing valuable insights into current trends and real-world applications."
             />
             <div className="emptyspace"></div>
           </div>
@@ -28,8 +28,24 @@ function Events() {
             <div className="emptyspace"></div>
             <Cards
               id="Eventscard"
-              title="Blockchain Documentation"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere delectus esse ab magni."
+              title="Hackathons and Competitions"
+              description="The club hosts hackathons and coding competitions to stimulate problem-solving and innovative thinking. These events offer a competitive yet supportive environment for students to demonstrate their skills and creativity."
+            />
+          </div>
+          <div className="Eventlists">
+            <Cards
+              id="Eventscard"
+              title="Project Development"
+              description="We mentor and support students in developing their own projects, providing hands-on experience and fostering confidence in their technical abilities. This practical approach helps members to apply theoretical knowledge effectively."
+            />
+            <div className="emptyspace"></div>
+          </div>
+          <div className="Eventlists">
+            <div className="emptyspace"></div>
+            <Cards
+              id="Eventscard"
+              title="Industry Connect"
+              description="The club facilitates interactions with industry professionals through guest lectures, webinars, and networking events. These connections provide students with insights into industry trends and career opportunities, helping them to stay updated and prepared for the professional world."
             />
           </div>
         </div>
@@ -37,4 +53,4 @@ function Events() {
     </>
   );
 }
-export default Events;
+      export default Events;

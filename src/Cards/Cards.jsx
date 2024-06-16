@@ -48,14 +48,68 @@ function Cards(props) {
         </div>
         <div className="tablet" id="member1_tablet">
           <img src={dummyImage} alt="" />
-          {props.member1}
-          <div className="post">Member1</div>
+          {props.leadDesigner}
+          <div className="post">Lead Designer</div>
         </div>
         <div className="tablet" id="member2_tablet">
           <img src={dummyImage} alt="" />
-          {props.member2}
-          <div className="post">Member2</div>
+          {props.eventCoordinator}
+          <div className="post">Event Coordinator</div>
         </div>
+        <div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.jointSecretary}
+          <div className="post">Joint-Secretary</div>
+        </div>
+        <div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.Developer}
+          <div className="post">Developer</div>
+        </div>
+        <div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.designer1}
+          <div className="post">Designer</div>
+        </div>
+        <div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.designer2}
+          <div className="post">Designer</div>
+        </div>
+        <div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.executiveMember1}
+          <div className="post">Executive Member</div>
+        </div>
+        <div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.executiveMember2}
+          <div className="post">Executive Member</div>
+        </div><div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.executiveMember3}
+          <div className="post">Executive Member</div>
+        </div><div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.executiveMember4}
+          <div className="post">Executive Member</div>
+        </div><div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.executiveMember5}
+          <div className="post">Executive Member</div>
+        </div>
+        <div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.executiveMember6}
+          <div className="post">Executive Member</div>
+        </div>
+        <div className="tablet" id="member2_tablet">
+          <img src={dummyImage} alt="" />
+          {props.executiveMember7}
+          <div className="post">Executive Member</div>
+        </div>
+
+
         <div
           className="tablet"
           onClick={() => {

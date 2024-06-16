@@ -10,15 +10,9 @@ export default function AboutUs() {
         <div className="aboutUsText">
           <div className="aboutUsTitle">About Us</div>
           <p>
-            KEC IT Club is a small, independent, and non-profit organization
-            that provides a safe and welcoming space for people to learn about
-            technology and computer science. We believe that everyone should
-            have access to the knowledge and skills they need to succeed in the
-            digital age. Our mission is to empower individuals to become
-            confident and competent in their use of technology and computer
-            science.
+          At Kathmandu Engineering College (KEC), the KEC IT Club is a vibrant group of tech enthusiasts committed to promoting an innovative and high-achieving culture in the field of information technology. Students may explore, learn, and succeed in a variety of technology disciplines through our club.
           </p>
-          <p>
+           <p>
             We are committed to providing a supportive and inclusive environment
             for all members of our community. We believe that everyone should
             feel valued and respected, regardless of their background or
@@ -47,17 +41,49 @@ export default function AboutUs() {
             that our community has access to the best resources and
             opportunities for learning and growth.
           </p>
+          <p>
+            Our goal is to create a creative, cooperative atmosphere where students may improve their technical abilities, obtain real-world experience, and be ready for lucrative professions in the engineering sector. With various programmes and events, we aim to close the gap between industrial demands and academic learning.
+          </p>
         </div>
         <Cards
           id="MembersCard"
           title="Our Members"
-          president="Sujan/Aryan"
-          vicePresident="That guy"
-          secretary="Him and Her"
-          member1="Him and Her"
-          member2="Him and Her"
+          president="Koshish Shrestha"
+          secretary="Prayas Silwal"
+          resourceManager="Kabita Khanal"
+          leadDesigner="Prajwol Shrestha"
+          eventCoordinator="Bijen Shrestha"
+          vicePresident="Sujan Sapkota"
+          jointSecretary="Aryan Manandhar"
+          Developer="Ankit Shrestha"
+          Designer1="Shreyas Acharya"
+          Designer2="Sneha Karki"
+          executiveMember1="Pranav Ram Joshi"
+          executiveMember2="Adarsha Acharya"
+          executiveMember3="Ashika Ghimire"
+          executiveMember4="Sworup Karki"
+          executiveMember5="Ayush Malla"
+          executiveMember6="Jyoti Kumari Gupta"
+          executiveMember7="Aayush Lamsal"
+
         />
       </div>
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
