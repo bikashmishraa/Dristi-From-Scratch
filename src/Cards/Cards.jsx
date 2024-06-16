@@ -53,6 +53,16 @@ function Cards(props) {
         </div>
       </div>
     );
+  } else if (props.id == "Eventscard") {
+    return (
+      <div className="glassCards glass parallaxEl" id={props.id}>
+        <div className="cardTitle">{props.title}</div>
+        <div className="tablet" id="event_tablet">
+          {props.description}
+          <div className="morelink">more</div>
+        </div>
+      </div>
+    );
   }
   return (
     <div className="glassCards glass parallaxEl" id={props.id}>
