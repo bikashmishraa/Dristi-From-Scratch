@@ -58,5 +58,24 @@
   border-radius: 50%;
   aspect-ratio: 1;
   width: 20%;
+}
 
+div.aboutUsContent div.glassCards#MembersCard{
+  transition: all .2s;
+}
+div.aboutUsContent div.glassCards#MembersCard.shorter{
+  width: 30rem;
+}
+div.aboutUsContent div.glassCards#MembersCard.larger{
+  position: fixed;
+  top: 0;
+  animation: slideIn .5s ease-in-out forwards;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+@keyframes slideIn {
+  100% {
+    height: fit-content;
+  }
 }

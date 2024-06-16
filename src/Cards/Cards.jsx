@@ -1,7 +1,9 @@
 import "./Cards.css";
 import dummyImage from "/president.png";
+import { useEffect, useState } from "react";
 
 function Cards(props) {
+  const [MembersOpen, setMembersOpen] = useState("shorter");
   if (props.id == "circleButtons") {
     return (
       <div className="glassCards glass parallaxEl" id={props.id}>
@@ -24,7 +26,10 @@ function Cards(props) {
     );
   } else if (props.id == "MembersCard") {
     return (
-      <div className="glassCards glass parallaxEl" id={props.id}>
+      <div
+        className={"glassCards glass parallaxEl " + MembersOpen}
+        id={props.id}
+      >
         <div className="cardTitle">{props.title}</div>
         <div className="tablet" id="president_tablet">
           <img src={dummyImage} alt="" />
@@ -50,6 +55,14 @@ function Cards(props) {
           <img src={dummyImage} alt="" />
           {props.member2}
           <div className="post">Member2</div>
+        </div>
+        <div
+          className="tablet"
+          onClick={() => {
+            setMembersOpen("larger");
+          }}
+        >
+          Show More
         </div>
       </div>
     );
