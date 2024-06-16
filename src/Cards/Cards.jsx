@@ -115,11 +115,12 @@ function Cards(props) {
         <div
           className="tablet showMore"
           onClick={() => {
-            setMembersCardState("Show Less");
             if (MembersOpen == "shorter") {
               setMembersOpen("larger");
+              setMembersCardState("Show Less");
             } else {
               setMembersOpen("shorter");
+              setMembersCardState("Show More");
             }
           }}
         >
