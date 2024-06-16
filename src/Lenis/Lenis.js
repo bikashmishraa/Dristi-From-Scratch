@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-export default function LenisComponent() {
+function LenisComponent() {
   const lenis = new Lenis({
     lerp: 0.1,
     wheelMultiplier: 0.7,
@@ -32,3 +32,4 @@ export default function LenisComponent() {
 
   return null;
 }
+export default LenisComponent;
