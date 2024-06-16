@@ -44,6 +44,12 @@ export default function AboutUs() {
           <p>
             Our goal is to create a creative, cooperative atmosphere where students may improve their technical abilities, obtain real-world experience, and be ready for lucrative professions in the engineering sector. With various programmes and events, we aim to close the gap between industrial demands and academic learning.
           </p>
+          <p>
+          For more information and to stay updated on our activities, follow us on our social media channels and visit our website.
+Contact Us 
+Email:kecktm.it.club@gmail.com
+Follow us on Facebook, Twitter, and Instagram.
+          </p>
         </div>
         <Cards
           id="MembersCard"

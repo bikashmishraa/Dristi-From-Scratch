@@ -22,6 +22,18 @@ export default function ContactUs() {
             Send
           </button>
         </form>
+        <div className="moreinfo">
+          <p>
+          For more information and to stay updated on our activities, follow us on our social media channels and visit our website.
+          Contact Us 
+          </p>
+          <p>
+          Email:kecktm.it.club@gmail.com
+          </p>
+          <p>
+          Follow us on Facebook, Twitter, and Instagram.
+          </p>
+        </div>
         <img
           className="parallaxEl"
           src={contactUsGraphics}

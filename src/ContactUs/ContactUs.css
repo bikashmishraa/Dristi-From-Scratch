@@ -116,3 +116,10 @@ input:-webkit-autofill:active{
   color: var(--color3a);
   background-color: var(--color1a);
 }
+.moreinfo{
+  font-size: 1rem;
+  color: var(--color1);
+  font-family: "Quicksand";
+  font-weight: bold;
+  transform: translate(-100px, 0);
+}
