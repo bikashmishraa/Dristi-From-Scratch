@@ -4,7 +4,8 @@ import mouseImg from "/m1.png";
 
 function Countdown() {
   // const deadline = new Date('May 15 24 00:00:00');
-  const deadline = new Date("November 15 24 00:00:00");
+  const deadline = new Date("June 24 24 00:00:00");
+  const event = "Advanced Machine Learning";
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [mins, setMins] = useState(0);
@@ -58,7 +59,8 @@ function Countdown() {
         </div>
         <div className="notcountdown">
           left for <br />
-          next event
+          {event}
+          <br />
         </div>
         <img className="mouseimg" src={mouseImg} alt="mouse img" />
       </div>
