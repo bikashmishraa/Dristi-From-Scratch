@@ -2,11 +2,13 @@ import eventGraphic from "/events_bg.png";
 import Cards from "../Cards/Cards";
 import Parallax from "../Parallax/Parallax";
 import Lines from "../Lines/Lines.jsx";
+import Nav from "../Nav/Nav.jsx";
 import { LenisComponent, lenis } from "../Lenis/Lenis.js";
 import "./Events.css";
 function Events() {
   return (
     <>
+      <Nav />
       <LenisComponent />
       <Parallax />
       <Lines />
